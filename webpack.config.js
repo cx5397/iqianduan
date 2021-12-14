@@ -13,8 +13,10 @@ module.exports = {
   },
   output: {
     path: path.resolve(path.join(__dirname, 'assets', 'js')),
-    filename: '[name].js'
+    filename: '[name].js',
+    
   },
+
   module: {
     rules: [
       {
