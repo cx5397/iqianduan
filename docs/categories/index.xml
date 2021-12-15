@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 15 Dec 2021 11:37:51 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 16:37:51 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>git</title>
-      <link>/categories/git/</link>
+      <title>部署</title>
+      <link>/categories/%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Wed, 15 Dec 2021 16:37:51 +0800</pubDate>
+      
+      <guid>/categories/%E9%83%A8%E7%BD%B2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>版本管理工具</title>
+      <link>/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Wed, 15 Dec 2021 11:37:51 +0800</pubDate>
       
-      <guid>/categories/git/</guid>
+      <guid>/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     

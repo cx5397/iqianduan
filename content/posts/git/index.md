@@ -7,7 +7,7 @@ comment = true
 toc = true
 reward = true
 categories = [
-  "git"
+  "版本管理工具"
 ]
 tags = [
   'git',
