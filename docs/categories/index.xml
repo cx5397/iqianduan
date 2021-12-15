@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Hugo Bootstrap</title>
+    <title>分类 on xiang blog</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on Hugo Bootstrap</description>
+    <description>Recent content in 分类 on xiang blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Fri, 03 Dec 2021 11:16:51 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 11:37:51 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Archive</title>
-      <link>/categories/archive/</link>
-      <pubDate>Fri, 03 Dec 2021 11:16:51 +0800</pubDate>
+      <title>git</title>
+      <link>/categories/git/</link>
+      <pubDate>Wed, 15 Dec 2021 11:37:51 +0800</pubDate>
       
-      <guid>/categories/archive/</guid>
+      <guid>/categories/git/</guid>
       <description></description>
     </item>
     

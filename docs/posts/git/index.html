@@ -1,0 +1,514 @@
+<!doctype html><html lang="zh-cn"
+  >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>git相关使用 - xiang blog</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
+<link rel="icon" href="/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="/images/icons/favicon.ico">
+<link rel="manifest" href="/manifest.json">
+<meta name="keywords" content="" />
+<meta name="description" content="git命令、github配置、gitlab配置、tapd解决bug关联git commit" /><meta itemprop="name" content="git相关使用">
+<meta itemprop="description" content="git命令、github配置、gitlab配置、tapd解决bug关联git commit"><meta itemprop="datePublished" content="2021-12-15T11:37:51+08:00" />
+<meta itemprop="dateModified" content="2021-12-15T11:37:51+08:00" />
+<meta itemprop="wordCount" content="852">
+<meta itemprop="keywords" content="git,gitlab,tapd,github," /><meta property="og:title" content="git相关使用" />
+<meta property="og:description" content="git命令、github配置、gitlab配置、tapd解决bug关联git commit" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/git/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-15T11:37:51+08:00" />
+<meta property="article:modified_time" content="2021-12-15T11:37:51+08:00" /><meta property="og:site_name" content="xiang blog" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="git相关使用"/>
+<meta name="twitter:description" content="git命令、github配置、gitlab配置、tapd解决bug关联git commit"/>
+<meta name="robots" content="index, follow" /><link rel="stylesheet" href="/css/bundle.min.ebfc87f7f6580e36e6640d41143a700b9ec6f4ff8e30ac45c6fb67b65d4fc1c0.css" integrity="sha256-6/yH9/ZYDjbmZA1BFDpwC57G9P&#43;OMKxFxvtntl1PwcA=" crossorigin="anonymous">
+<noscript><link rel="stylesheet" href="/css/bundle.min.ebfc87f7f6580e36e6640d41143a700b9ec6f4ff8e30ac45c6fb67b65d4fc1c0.css" integrity="sha256-6/yH9/ZYDjbmZA1BFDpwC57G9P&#43;OMKxFxvtntl1PwcA=" crossorigin="anonymous"></noscript></head>
+  <body><script>const items=['mode','palette'];items.forEach(function(a){const b=localStorage.getItem('hbs-'+a);b&&document.body.parentElement.setAttribute('data-'+a,b)})</script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button><a class="navbar-brand me-3" href="/"><img class="logo" alt="Logo" src="/images/logo.webp" loading="lazy"
+   width="136" height="69"
+   />
+爱前端
+    </a>
+    <button class="navbar-social-share" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSocialShare"
+  aria-controls="offcanvasSocialShare" aria-label="Toggle social share">
+  <i class="fas fa-share-alt"></i>
+</button>
+
+<div class="offcanvas offcanvas-bottom surface" tabindex="-1" id="offcanvasSocialShare" aria-labelledby="offcanvasSocialShare">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">Share</h3>
+    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button"
+      target="_blank" href="https://twitter.com/intent/tweet?title=git%e7%9b%b8%e5%85%b3%e4%bd%bf%e7%94%a8&url=%2fposts%2fgit%2f">
+      <i class="fab fa-fw fa-twitter"></i> Twitter
+    </a>
+    <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button"
+      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fgit%2f">
+      <i class="fab fa-fw fa-facebook-f"></i> Facebook
+    </a>
+  </div>
+</div>
+    <button class="navbar-settings" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings"
+  aria-controls="offcanvasSettings" aria-label="Toggle settings">
+  <i class="fas fa-ellipsis-v"></i>
+</button>
+
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasSettings" aria-labelledby="offcanvasSettings">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">设置</h3>
+    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+
+<section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-adjust"></i> 模式</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="modeSwitcher">
+      </div>
+    </div>
+  </form>
+</section>
+
+<section class="setting">
+  <form class="font-size-switcher-form row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-font"></i> 字体大小</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+    </div>
+  </form>
+</section>
+
+
+<section class="setting palettes">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-palette"></i> 配色</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <a id="btnPalette" class="btn btn-sm btn-outline-primary" role="button" aria-label="palettePicker">
+        <i class="fas fa-eye-dropper"></i>
+      </a>
+    </div>
+  </form>
+  <div class="mt-2 d-flex visually-hidden" id="palettePicker"><button type="button" id="palette-blue" aria-label="蓝色"
+        class="btn btn-sm palette" data-palette="blue">
+      </button><button type="button" id="palette-blue-gray" aria-label="蓝灰色"
+        class="btn btn-sm palette" data-palette="blue-gray">
+      </button><button type="button" id="palette-brown" aria-label="棕色"
+        class="btn btn-sm palette" data-palette="brown">
+      </button><button type="button" id="palette-cyan" aria-label="青色"
+        class="btn btn-sm palette" data-palette="cyan">
+      </button><button type="button" id="palette-green" aria-label="绿色"
+        class="btn btn-sm palette" data-palette="green">
+      </button><button type="button" id="palette-indigo" aria-label="靛青色"
+        class="btn btn-sm palette" data-palette="indigo">
+      </button><button type="button" id="palette-orange" aria-label="橙色"
+        class="btn btn-sm palette" data-palette="orange">
+      </button><button type="button" id="palette-pink" aria-label="粉色"
+        class="btn btn-sm palette" data-palette="pink">
+      </button><button type="button" id="palette-purple" aria-label="紫色"
+        class="btn btn-sm palette" data-palette="purple">
+      </button><button type="button" id="palette-red" aria-label="红色"
+        class="btn btn-sm palette" data-palette="red">
+      </button><button type="button" id="palette-teal" aria-label="蓝绿色"
+        class="btn btn-sm palette" data-palette="teal">
+      </button><button type="button" id="palette-yellow" aria-label="黄色"
+        class="btn btn-sm palette" data-palette="yellow">
+      </button></div>
+</section>
+<section class="setting actions d-flex justify-content-center mt-auto">
+  <a role="button" class="action action-reload-page">
+    <span class="action-icon"><i class="fas fa-2x fa-redo-alt"></i></span> 刷新
+  </a>
+  <a role="button" class="action action-copy-url">
+    <span class="action-icon"><i class="fas fa-2x fa-link"></i></span> 复制链接
+  </a>
+</section>
+
+</div>
+</div>
+
+    <div class="collapse navbar-collapse" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
+      <form class="search-bar my-1" action="/search">
+  <div class="input-group input-group-sm">
+    <span class="btn btn-search disabled position-absolute left-0"><i class="fas fa-fw fa-search"></i></span>
+    <input class="form-control rounded-pill" name="q" type="search" aria-label="Search">
+  </div>
+</form>
+      <ul class="navbar-nav ms-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives/">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories/">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags/">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series/">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link" id="navbarDropdownSupport" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-fw fa-chevron-circle-down"></i>支持
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownSupport"><li>
+              <a class="dropdown-item"
+                href="https://github.com/cx5397/iqianduan/issues" target="_blank" rel="noopener noreferrer">
+                Bug Report
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/faq/">
+                Frequently Asked Questions
+              </a>
+            </li><li><hr class="dropdown-divider"></li><li>
+              <a class="dropdown-item"
+                href="https://hbs.razonyang.com" target="_blank" rel="noopener noreferrer">
+                Demo(Netlify)
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://hbs-cn.razonyang.com" target="_blank" rel="noopener noreferrer">
+                Demo(China)
+              </a>
+            </li></ul>
+        </li></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-lg-8">
+  <div class="container"><nav class="row card component" aria-label="breadcrumb">
+  <div class="card-body">
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">Posts</a></li><li class="breadcrumb-item active">Git相关使用</li></ol>
+  </div>
+</nav><article class="row card component mb-4 post"><div class="post-panel-wrapper">
+  <div class="d-flex flex-column component rounded post-panel">
+    
+    <a id="sidebarToggler" class="action d-none d-lg-block" role="button">
+  <i class="fas fa-fw fa-expand-alt" data-fa-transform="rotate-45"></i>
+</a>
+  
+    
+
+    <a class="action btn-reward" role="button" data-bs-toggle="modal" data-bs-target="#rewardModal" title="打赏">
+  <i class="fas fa-fw fa-coffee"></i>
+</a>
+    <a class="action" data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
+  data-bs-trigger="focus" tabindex="0" role="button" aria-label="Copyright" 
+  data-bs-content="&lt;a target=&#34;_blank&#34; rel=&#34;license noopener noreferrer&#34; href=&#34;https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh&#34;&gt;CC BY-NC-ND 4.0 &lt;i class=&#34;fab fa-fw fa-creative-commons&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-by&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nc&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nd&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+">
+  <i class="fas fa-fw fa-copyright"></i>
+</a>
+    <a class="action" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+  <i class="fas fa-fw fa-list-alt"></i>
+</a>
+    
+  </div>
+</div>
+<div class="card-header ">
+    <h1 class="card-title post-title">Git相关使用
+</h1>
+  </div>
+  <div class="card-body"><div class="post-meta">
+  <span class="post-date" title="创建于 2021-12-15 11:37:51 &#43;0800 CST。">
+    2021-12-15
+  </span><span class="post-reading-time">
+    2 分钟阅读
+  </span><span class="post-taxonomies"><a href="/categories/git/" class="badge rounded-pill post-taxonomy">git</a><a href="/series/%E5%B7%A5%E5%85%B7/" class="badge rounded-pill post-taxonomy">工具</a><a href="/tags/git/" class="badge rounded-pill post-taxonomy">git</a><a href="/tags/gitlab/" class="badge rounded-pill post-taxonomy">gitlab</a><a href="/tags/tapd/" class="badge rounded-pill post-taxonomy">tapd</a><a href="/tags/github/" class="badge rounded-pill post-taxonomy">github</a></span>
+</div>
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+  </div>
+  <div class="offcanvas-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#git-命令">git 命令</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#gitlab-配置">gitlab 配置</a></li>
+    <li><a href="#github-配置">github 配置</a></li>
+    <li><a href="#tapd-与-gitlab-关联">tapd 与 gitlab 关联</a></li>
+  </ul>
+</nav>
+  </div>
+</div><div class="post-content mb-3"><p>常用 git 命令，和相关产品的配置</p>
+<h2 id="git-命令">git 命令</h2>
+<h4 id="代码拉取">代码拉取</h4>
+<ul>
+<li>git 配置用户名邮箱
+<code>$ git config --global user.name &quot;John Doe&quot;</code>
+<code>$ git config --global user.email johndoe@example.com</code></li>
+<li>克隆仓库 <code>$ git clone git://github.com/schacon/ticgit.git</code></li>
+<li>git clone 只能 clone 远程库的 master 分支，无法 clone 所有分支，<code>git checkout -b develop origin/develop</code>，作用是 checkout 远程的 develop 分支，在本地起名为 develop 分支，并切换到本地的 develop 分支</li>
+</ul>
+<h4 id="branch-操作">branch 操作</h4>
+<ul>
+<li>创建分支 <code>git branch 分支名;git checkout分支名，git checkout -b 分支名</code></li>
+<li>删除某分支 <code>git branch -d 分支名</code></li>
+<li>查看本地分支情况 <code>git branch</code></li>
+<li>查看远程分支 <code>git branch -r</code></li>
+<li>分支重命名 <code>git branch -m oldname newname</code></li>
+<li>将 test 分支合并进当前分支 <code>git merge test</code></li>
+</ul>
+<h4 id="tag-操作">tag 操作</h4>
+<ul>
+<li>查看 <code>git tag</code></li>
+<li>给当前 commit 添加 tag <code>git tag -a tagname -m &quot;comment&quot;</code> or <code>git tag tagname</code></li>
+<li>删除 tag <code>git tag -d tagname</code></li>
+<li>提交 tag <code>git push origin tagname</code> or once push all <code>git push origin --tags</code></li>
+</ul>
+<h4 id="代码状态">代码状态</h4>
+<ul>
+<li>显示有变更的文件 <code>git status </code></li>
+<li>显示当前分支的版本历史 <code>git log [--pretty=oneline]</code></li>
+<li>显示历史操作记录 <code>git reflog</code></li>
+<li>查看修改情况 <code>git diff </code></li>
+</ul>
+<h4 id="代码还原">代码还原</h4>
+<ul>
+<li>语法 git reset －－[mixed 默认|hard|soft] commit 号|HEAD~n|HEAD^^^|HEAD^</li>
+<li>hard－&gt;add 之前文件也还原(回到 1)</li>
+<li>mixed－&gt;add 之前(回到 2)</li>
+<li>soft－&gt;commit 之前，保留 add(回到 3)</li>
+<li>&lt;&ndash;1-modify&ndash;2&ndash;add&ndash;3&ndash;commit&ndash;4&ndash;&gt;</li>
+<li>优先级为:从暂存区,当前最后一次 commit,拿此文件替换工作区此文件 <code>git checkout --文件名</code></li>
+</ul>
+<h4 id="提交代码">提交代码</h4>
+<ul>
+<li><code>git add [file|.|-A] </code></li>
+<li><code>git commit -a --amend</code> (修改上一次 commit 信息) <code>git commit -m</code> “注释” (添加本次 commit 的注释)</li>
+<li>更新远程代码 <code> git pull origin branchname</code></li>
+<li>提交代码 <code>git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</code> or samename <code>git push origin branchname</code>
+(在解决完冲突后，重新 add commit push）</li>
+</ul>
+<h2 id="gitlab-配置">gitlab 配置</h2>
+<ol>
+<li>打开 git bash 窗口</li>
+<li>查看是否已经存在 SSH key pair <code>cat ~/.ssh/id_rsa.pub</code></li>
+<li>存在就跳过生成步骤 4</li>
+<li>生成 ssh key 命令： ssh-keygen -t rsa -C &ldquo;your email address&rdquo;</li>
+<li>ssh 公钥 id_rsa.pub 拷贝到 gitlab&rsquo;右上角&gt;头像&gt;设置&gt;ssh 密钥'</li>
+<li><a href="http://172.16.1.155/help/ssh/README#generating-a-new-ssh-key-pair" target="_blank" rel="noopener noreferrer">官方相关说明</a>
+</li>
+</ol>
+<h2 id="github-配置">github 配置</h2>
+<ul>
+<li>github 配置类似 gitlab 配置</li>
+<li>ssh 公钥 id_rsa.pub 可以共用，不需要重新生成(哪怕 your email address 不一样也可以)</li>
+<li>通信凭证在 2021.8 月禁用了 account passwords 方式</li>
+<li>默认方式由 ssh 变为了 <a href="https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/" target="_blank" rel="noopener noreferrer">https token</a>
+，代码仓库地址默认是 https 而不再是 ssh
+
+  <img class="img-fluid" alt="代码仓库默认地址" src="/posts/git/images/ck_hu66f73e86e9bec5e19d4c1ba72027cbed_10609_0x200_resize_box_3.png" loading="lazy"
+   width="298" height="200"
+   />
+
+</li>
+<li>按照原来 ssh 配置后，执行<code>ssh -T git@github.com</code> 提示 You&rsquo;ve successfully authenticated 则凭证正确</li>
+<li>复制 ssh 地址， git clone 代码(注意要选择 ssh 地址，因为配置的凭证是 ssh 的),或者用 https 地址，配置新的 https token 认证方式</li>
+</ul>
+<h2 id="tapd-与-gitlab-关联">tapd 与 gitlab 关联</h2>
+<ul>
+<li><a href="https://www.tapd.cn/help/show#1120003271001000292" target="_blank" rel="noopener noreferrer">tapd 文档相关说明</a>
+</li>
+</ul></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-coffee"></i>打赏</h5>
+        <a href="#" data-bs-dismiss="modal" class="btn btn-sm btn-outline-primary" aria-label="Close"><i class="fas fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-bs-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-bs-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/alipay.png" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/wechat.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><hr /><div class="post-navs d-flex mb-3 justify-content-evenly">
+  <div class="post-nav post-prev"><i class="fas fa-fw fa-chevron-left"></i>
+    <a href="/about/">关于
+</a>
+  </div></div></div>
+</article><section class="related-posts row card component">
+    <div class="card-header">
+      <h2 class="card-title">相关文章</h2>
+    </div>
+    <div class="card-body">
+      <ul class="post-list"><li>
+          <a href="/about/">关于
+</a>
+          <span class="float-end post-date">2019-02-28
+</span>
+        </li><li>
+          <a href="/faq/">Frequently Asked Questions
+</a>
+          <span class="float-end post-date">0001-01-01
+</span>
+        </li><li>
+          <a href="/offline/">Offline
+</a>
+          <span class="float-end post-date">0001-01-01
+</span>
+        </li><li>
+          <a href="/contact/">联系我们
+</a>
+          <span class="float-end post-date">0001-01-01
+</span>
+        </li></ul>
+    </div>
+  </section><div class="card component row post-comments">
+  <div class="card-header">
+    <h2 class="card-title">评论</h2>
+  </div>
+  <div class="card-body"><script src="https://utteranc.es/client.js"
+  repo="razonyang/hugo-theme-bootstrap-comments"
+  issue-term="pathname"
+  label="comment"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script></div>
+</div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container">
+    
+    <section class="card row text-center profile component">
+  <div class="card-body">
+    <div class="col-12 d-flex align-items-center justify-content-center"><img class="profile-avatar rounded-circle" alt="chen xiang" src="/images/avatar.png" loading="lazy"
+   width="531" height="515"
+   />
+</div>
+    <div class="col-12 profile-meta"><div class="profile-name">chen xiang</div><div class="profile-bio">frontend、nodejs Engineer.</div><div class="profile-company"><i class="fas fa-fw fa-building"></i>保密</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>深圳市软件大厦</div><div class="profile-about"><i class="fas fa-fw fa-user"></i><a href="/about/">关于</a></div><div class="profile-contact"><i class="fas fa-fw fa-question-circle"></i><a href="/contact/">联系我们</a></div></div>
+  </div>
+</section>
+  <section class="recent-posts row card component">
+  <div class="card-header">
+    <h2 class="card-title">最近文章</h2>
+  </div>
+  <div class="card-body">
+    <ul class="post-list"><li>
+        <a href="/posts/git/">Git相关使用
+</a>
+        <span class="float-end post-date">2021-12-15
+</span>
+      </li></ul>
+  </div>
+</section><section class="taxonomies row card component">
+      <div class="card-header">
+        <h2 class="card-title">
+          <a href="/categories">分类</a>
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="py-2"><a href="/categories/git/" class="badge rounded post-taxonomy" title="git">
+            git
+          </a></div>
+      </div>
+    </section><section class="taxonomies row card component">
+      <div class="card-header">
+        <h2 class="card-title">
+          <a href="/series">专栏</a>
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="py-2"><a href="/series/%E5%B7%A5%E5%85%B7/" class="badge rounded post-taxonomy" title="工具">
+            工具
+          </a></div>
+      </div>
+    </section><section class="taxonomies row card component">
+      <div class="card-header">
+        <h2 class="card-title">
+          <a href="/tags">标签</a>
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="py-2"><a href="/tags/git/" class="badge rounded post-taxonomy" title="git">
+            git
+          </a><a href="/tags/github/" class="badge rounded post-taxonomy" title="github">
+            github
+          </a><a href="/tags/gitlab/" class="badge rounded post-taxonomy" title="gitlab">
+            gitlab
+          </a><a href="/tags/tapd/" class="badge rounded post-taxonomy" title="tapd">
+            tapd
+          </a></div>
+      </div>
+    </section>
+    
+  </div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><a class="nav-link social-link" href="mailto:cx5397@qq.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a><a class="nav-link social-link" target="_blank" href="https://github.com/cx5397" title="GitHub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-github"></i>
+      </a><a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3542483317&amp;site=qq&amp;menu=yes" title="QQ" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-qq"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.zhihu.com/people/chen-xiang-60-27" title="Zhihu" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-zhihu"></i>
+      </a></nav>
+<div class="copyright mb-2">
+  Copyright © 2016-2021 Chen Xiang. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+  Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
+</div><a href="https://github.com/cx5397/iqianduan/tree/main/docs" target="_blank">
+  Deploys by github page
+</a>
+</footer>
+<script src="/js/bundle.min.4ef9d47b81edceeabf12a468e0a8228e2973b77670b64957bd005dc55cde7bea.js" integrity="sha256-TvnUe4Htzuq/EqRo4Kgijilzt3ZwtklXvQBdxVzee&#43;o=" crossorigin="anonymous" defer></script><script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('\/service-worker.js').then(function(reg) {
+      console.log('Successfully registered service worker', reg);
+    }).catch(function(err) {
+      console.warn('Error whilst registering service worker', err);
+    });
+  });
+}
+</script>
+</body>
+</html>
