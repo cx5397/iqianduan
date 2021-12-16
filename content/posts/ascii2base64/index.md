@@ -26,9 +26,11 @@ ascii 转 base64 的规则
 When you have some binary data that you want to ship across a network, you generally don't do it by just streaming the bits and bytes over the wire in a raw format. Why? because some media are made for streaming text. You never know -- some protocols may interpret your binary data as control characters (like a modem), or your binary data could be screwed up because the underlying protocol might think that you've entered a special character combination (like how FTP translates line endings). So to get around this, people encode the binary data into characters. Base64 is one of these types of encodings. Why 64? Because you can generally rely on the same 64 characters being present in many character sets, and you can be reasonably confident that your data's going to end up on the other side of the wire uncorrupted
 
 标准 ASCII 码，使用 7 位二进制数 2（2^7=128,剩下的 1 位二进制为 0）来表示所有的大写和小写字母，数字 0 到 9、标点符号，以及在美式英语中使用的特殊控制字符，码表如下
+
 ![ascii](images/ascii.png)
 
 base64 使用大写和小写字母，数字 0 到 9，+ /共 64 个字符编码，码表如下
+
 ![base64](images/base64.png)
 
 那么怎么将 ascii 字符'ab',转化为 base64 码，规则是怎么样的呢？
