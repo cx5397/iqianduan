@@ -12,7 +12,7 @@
 <meta name="description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again." /><meta itemprop="name" content="使用hugo搭建博客">
 <meta itemprop="description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."><meta itemprop="datePublished" content="2021-12-15T16:37:51+08:00" />
 <meta itemprop="dateModified" content="2021-12-15T16:37:51+08:00" />
-<meta itemprop="wordCount" content="1393">
+<meta itemprop="wordCount" content="1385">
 <meta itemprop="keywords" content="hugo,hugo-theme-bootstrap,github page," /><meta property="og:title" content="使用hugo搭建博客" />
 <meta property="og:description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again." />
 <meta property="og:type" content="article" />
@@ -256,7 +256,7 @@
     <li><a href="#域名申请">域名申请</a></li>
     <li><a href="#icp-备案与免费静态服务器">icp 备案与免费静态服务器</a></li>
     <li><a href="#hugo-工程创建与编译">hugo 工程创建与编译</a></li>
-    <li><a href="#我们手动编译有点辛苦我们可以用-github-actions-自动构建来优化流程这样每次修改就会自动编译部署">我们手动编译，有点辛苦，我们可以用 github Actions 自动构建，来优化流程，这样每次修改，就会自动编译，部署</a></li>
+    <li><a href="#我们可以用-github-actions-自动构建来优化流程这样每次-commit就会自动编译部署">我们可以用 github Actions 自动构建，来优化流程，这样每次 commit，就会自动编译，部署</a></li>
     <li><a href="#域名解析与-github-page-设置">域名解析与 github page 设置</a></li>
   </ul>
 </nav>
@@ -283,22 +283,22 @@
 <li>将解压的可执行文件路径 bin 目录加入环境变量 path</li>
 <li>新开 cmd 命令窗口，创建工程</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>hugo new site myblog
-<span class="ln">2</span><span class="nb">cd</span> myblog
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="ln">1</span>hugo new site myblog
+<span class="ln">2</span>cd myblog
 <span class="ln">3</span>新建目录themes
 </code></pre></div><ol start="4">
 <li>将<a href="https://github.com/cx5397/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">hugo-theme-bootstrap</a>
 下载下来放在 themes 目录下</li>
 <li>在 myblog 工程根目录下执行下列命令</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>cp -a themes/hugo-theme-bootstrap/exampleSite/* .
-<span class="ln">2</span>//如果你使用的是 Windows，请改用 xcopy .<span class="se">\t</span>hemes<span class="se">\h</span>ugo-theme-bootstrap<span class="se">\e</span>xampleSite /E
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="ln">1</span>cp -a themes/hugo-theme-bootstrap/exampleSite/* .
+<span class="ln">2</span>//如果你使用的是 Windows，请改用 xcopy .\themes\hugo-theme-bootstrap\exampleSite /E
 </code></pre></div><ol start="6">
 <li>运行工程 <code>hugo server --watch</code></li>
 <li>编译文件到 docs 目录下 <code>hugo -d docs</code></li>
 <li>将整个工程提交到 github 仓库中</li>
 </ol>
-<h2 id="我们手动编译有点辛苦我们可以用-github-actions-自动构建来优化流程这样每次修改就会自动编译部署">我们手动编译，有点辛苦，我们可以用 github Actions 自动构建，来优化流程，这样每次修改，就会自动编译，部署</h2>
+<h2 id="我们可以用-github-actions-自动构建来优化流程这样每次-commit就会自动编译部署">我们可以用 github Actions 自动构建，来优化流程，这样每次 commit，就会自动编译，部署</h2>
 <ol>
 <li>配置 settings pages 项,部署分支改为 gh-pages,目录选择/root,工作流编译的代码会放在这里</li>
 <li>配置 Actions 项，点击最上面的<code>set up a workflow yourself</code>， 将下面的工作流代码复制进.github/workflows/你的分支名.yml，然后 start commit</li>
