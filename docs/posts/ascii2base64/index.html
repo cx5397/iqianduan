@@ -3,22 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>专栏 - xiang blog</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
+    <title>ascii转base64 - xiang blog</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
 <link rel="icon" href="/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
 <link rel="icon" href="/images/icons/favicon.ico">
 <link rel="manifest" href="/manifest.json">
-<meta name="keywords" content="Hugo, Bootstrap, 博客主题" />
-<meta name="description" content="一个快速、响应式和功能丰富的 Hugo 博客主题" /><meta itemprop="name" content="专栏">
-<meta itemprop="description" content="一个快速、响应式和功能丰富的 Hugo 博客主题"><meta property="og:title" content="专栏" />
-<meta property="og:description" content="一个快速、响应式和功能丰富的 Hugo 博客主题" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/series/" /><meta property="og:site_name" content="xiang blog" />
+<meta name="keywords" content="" />
+<meta name="description" content="ascii码有很多不可见字符，不方便正确的传输，需要转化成可见字符,转化规则如下" /><meta itemprop="name" content="ascii转base64">
+<meta itemprop="description" content="ascii码有很多不可见字符，不方便正确的传输，需要转化成可见字符,转化规则如下"><meta itemprop="datePublished" content="2021-12-16T12:01:51+08:00" />
+<meta itemprop="dateModified" content="2021-12-16T12:01:51+08:00" />
+<meta itemprop="wordCount" content="688">
+<meta itemprop="keywords" content="base64,ascii," /><meta property="og:title" content="ascii转base64" />
+<meta property="og:description" content="ascii码有很多不可见字符，不方便正确的传输，需要转化成可见字符,转化规则如下" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/ascii2base64/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-16T12:01:51+08:00" />
+<meta property="article:modified_time" content="2021-12-16T12:01:51+08:00" /><meta property="og:site_name" content="xiang blog" />
+
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="专栏"/>
-<meta name="twitter:description" content="一个快速、响应式和功能丰富的 Hugo 博客主题"/>
-<meta name="robots" content="index, follow" /><link rel="alternate" type="application/rss+xml" href="/series/index.xml" title="xiang blog" /><link rel="stylesheet" href="/css/bundle.min.ebfc87f7f6580e36e6640d41143a700b9ec6f4ff8e30ac45c6fb67b65d4fc1c0.css" integrity="sha256-6/yH9/ZYDjbmZA1BFDpwC57G9P&#43;OMKxFxvtntl1PwcA=" crossorigin="anonymous">
+<meta name="twitter:title" content="ascii转base64"/>
+<meta name="twitter:description" content="ascii码有很多不可见字符，不方便正确的传输，需要转化成可见字符,转化规则如下"/>
+<meta name="robots" content="index, follow" /><link rel="stylesheet" href="/css/bundle.min.ebfc87f7f6580e36e6640d41143a700b9ec6f4ff8e30ac45c6fb67b65d4fc1c0.css" integrity="sha256-6/yH9/ZYDjbmZA1BFDpwC57G9P&#43;OMKxFxvtntl1PwcA=" crossorigin="anonymous">
 <noscript><link rel="stylesheet" href="/css/bundle.min.ebfc87f7f6580e36e6640d41143a700b9ec6f4ff8e30ac45c6fb67b65d4fc1c0.css" integrity="sha256-6/yH9/ZYDjbmZA1BFDpwC57G9P&#43;OMKxFxvtntl1PwcA=" crossorigin="anonymous"></noscript></head>
   <body><script>const items=['mode','palette'];items.forEach(function(a){const b=localStorage.getItem('hbs-'+a);b&&document.body.parentElement.setAttribute('data-'+a,b)})</script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
   <div class="container">
@@ -44,11 +50,11 @@
   </div>
   <div class="offcanvas-body">
     <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=%e4%b8%93%e6%a0%8f&url=%2fseries%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=ascii%e8%bd%acbase64&url=%2fposts%2fascii2base64%2f">
       <i class="fab fa-fw fa-twitter"></i> Twitter
     </a>
     <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button"
-      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fseries%2f">
+      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fascii2base64%2f">
       <i class="fab fa-fw fa-facebook-f"></i> Facebook
     </a>
   </div>
@@ -161,7 +167,7 @@
             <i class="fas fa-fw fa-tags"></i>标签
           </a>
         </li><li class="nav-item">
-          <a class="nav-link active" href="/series/">
+          <a class="nav-link" href="/series/">
             <i class="fas fa-fw fa-columns"></i>专栏
           </a>
         </li><li class="nav-item dropdown">
@@ -199,37 +205,140 @@
 <div class="col-lg-8">
   <div class="container"><nav class="row card component" aria-label="breadcrumb">
   <div class="card-body">
-    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item active">专栏</li></ol>
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">Posts</a></li><li class="breadcrumb-item active">Ascii转base64</li></ol>
   </div>
-</nav><div class="taxonomys"><div class="taxonomy row card component">
-        <div class="card-header">
-          <h2 class="taxonomy-title card-title">
-            <a href="/series/%E5%8E%9F%E7%90%86/">原理</a>
-          </h2>
-        </div>
-        <div class="card-body">
-          <div class="taxonomy-meta my-2">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>总共 1 篇文章</span>
-          </div><ul class="taxonomy-posts post-list"><li class="taxonomy-post">
-              <a class="post-title" href="/posts/ascii2base64/">ascii转base64</a>
-              <span class="float-end post-date">12-16</span>
-            </li></ul></div></div><div class="taxonomy row card component">
-        <div class="card-header">
-          <h2 class="taxonomy-title card-title">
-            <a href="/series/%E5%B7%A5%E5%85%B7/">工具</a>
-          </h2>
-        </div>
-        <div class="card-body">
-          <div class="taxonomy-meta my-2">
-            <span class="taxonomy-post-count"><i class="fas fa-fw fa-file-alt"></i>总共 2 篇文章</span>
-          </div><ul class="taxonomy-posts post-list"><li class="taxonomy-post">
-              <a class="post-title" href="/posts/buildwebsite/">使用hugo搭建博客</a>
-              <span class="float-end post-date">12-15</span>
-            </li><li class="taxonomy-post">
-              <a class="post-title" href="/posts/git/">git相关使用</a>
-              <span class="float-end post-date">12-15</span>
-            </li></ul></div></div></div><div class="row table-responsive mb-3"></div>
+</nav><article class="row card component mb-4 post"><div class="post-panel-wrapper">
+  <div class="d-flex flex-column component rounded post-panel">
+    
+    <a id="sidebarToggler" class="action d-none d-lg-block" role="button">
+  <i class="fas fa-fw fa-expand-alt" data-fa-transform="rotate-45"></i>
+</a>
+  
+    
+
+    <a class="action btn-reward" role="button" data-bs-toggle="modal" data-bs-target="#rewardModal" title="打赏">
+  <i class="fas fa-fw fa-coffee"></i>
+</a>
+    <a class="action" data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
+  data-bs-trigger="focus" tabindex="0" role="button" aria-label="Copyright" 
+  data-bs-content="&lt;a target=&#34;_blank&#34; rel=&#34;license noopener noreferrer&#34; href=&#34;https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh&#34;&gt;CC BY-NC-ND 4.0 &lt;i class=&#34;fab fa-fw fa-creative-commons&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-by&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nc&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nd&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+">
+  <i class="fas fa-fw fa-copyright"></i>
+</a>
+    
+    
+  </div>
 </div>
+<div class="card-header ">
+    <h1 class="card-title post-title">Ascii转base64
+</h1>
+  </div>
+  <div class="card-body"><div class="post-meta">
+  <span class="post-date" title="创建于 2021-12-16 12:01:51 &#43;0800 CST。">
+    2021-12-16
+  </span><span class="post-reading-time">
+    2 分钟阅读
+  </span><span class="post-taxonomies"><a href="/categories/%E7%BC%96%E7%A0%81/" class="badge rounded-pill post-taxonomy">编码</a><a href="/series/%E5%8E%9F%E7%90%86/" class="badge rounded-pill post-taxonomy">原理</a><a href="/tags/base64/" class="badge rounded-pill post-taxonomy">base64</a><a href="/tags/ascii/" class="badge rounded-pill post-taxonomy">ascii</a></span>
+</div>
+<div class="post-content mb-3"><p>ascii 转 base64 的规则</p>
+<p>When you have some binary data that you want to ship across a network, you generally don&rsquo;t do it by just streaming the bits and bytes over the wire in a raw format. Why? because some media are made for streaming text. You never know &ndash; some protocols may interpret your binary data as control characters (like a modem), or your binary data could be screwed up because the underlying protocol might think that you&rsquo;ve entered a special character combination (like how FTP translates line endings). So to get around this, people encode the binary data into characters. Base64 is one of these types of encodings. Why 64? Because you can generally rely on the same 64 characters being present in many character sets, and you can be reasonably confident that your data&rsquo;s going to end up on the other side of the wire uncorrupted</p>
+<p>标准 ASCII 码，使用 7 位二进制数 2（2^7=128,剩下的 1 位二进制为 0）来表示所有的大写和小写字母，数字 0 到 9、标点符号，以及在美式英语中使用的特殊控制字符，码表如下
+<img class="img-fluid" alt="ascii" src="/posts/ascii2base64/images/ascii.png" loading="lazy"
+   width="689" height="784"
+   />
+
+</p>
+<p>base64 使用大写和小写字母，数字 0 到 9，+ /共 64 个字符编码，码表如下
+<img class="img-fluid" alt="base64" src="/posts/ascii2base64/images/base64.png" loading="lazy"
+   width="836" height="566"
+   />
+
+</p>
+<p>那么怎么将 ascii 字符&rsquo;ab',转化为 base64 码，规则是怎么样的呢？</p>
+<p>我们在 ascii 码表分别找到 a，b 的码值为 97,98，用 2 进制表示为 1100001，1100010(可以使用方法 97..toString(2)得到)，不足 8 位的在前面补 0，那么‘ab’二进制表示就是 01100001 01100010</p>
+<p>base64 只有 64 个字符，只需要 6（2^6=64）位就可以容纳，那么我们可以分割成 011000 010110 0010，① 后面不足 6 位在后面补 0，于是就成为了 011000 010110 001000，我们得出他们的 10 进制分别为 24,22,8（可以使用 parseInt(11000,2)计算出）</p>
+<p>通过比对 base64 码，我们分别找到 24,22,8 对应的字符为 Y,W,I</p>
+<p>根据规定转化后的长度需要是 4 的倍数，② 不足部分在后面加‘=’，于是变成了 YWI=,我们通过 btoa(&lsquo;ab&rsquo;)方法验证，结果正确</p>
+<p><img class="img-fluid" alt="console" src="/posts/ascii2base64/images/console.png" loading="lazy"
+   width="522" height="272"
+   />
+
+</p>
+<p>ab 字符实际有效占用的空间是 2<em>7=14 位（标准的 ascii 只有 7 位有效的)，转化为 base64 后，4</em>8=32 位（这里加了个=，多了 8 位），因此 base64 编码后会增加传输量，具体增加多少取决于 ① ② 处</p></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-coffee"></i>打赏</h5>
+        <a href="#" data-bs-dismiss="modal" class="btn btn-sm btn-outline-primary" aria-label="Close"><i class="fas fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-bs-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-bs-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/alipay.png" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/wechat.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><hr /><div class="post-navs d-flex mb-3 justify-content-evenly">
+  <div class="post-nav post-prev"><i class="fas fa-fw fa-chevron-left"></i>
+    <a href="/posts/buildwebsite/">使用hugo搭建博客
+</a>
+  </div></div></div>
+</article><section class="related-posts row card component">
+    <div class="card-header">
+      <h2 class="card-title">相关文章</h2>
+    </div>
+    <div class="card-body">
+      <ul class="post-list"><li>
+          <a href="/posts/buildwebsite/">使用hugo搭建博客
+</a>
+          <span class="float-end post-date">2021-12-15
+</span>
+        </li><li>
+          <a href="/posts/git/">Git相关使用
+</a>
+          <span class="float-end post-date">2021-12-15
+</span>
+        </li><li>
+          <a href="/about/">关于
+</a>
+          <span class="float-end post-date">2019-02-28
+</span>
+        </li><li>
+          <a href="/faq/">Frequently Asked Questions
+</a>
+          <span class="float-end post-date">0001-01-01
+</span>
+        </li><li>
+          <a href="/offline/">Offline
+</a>
+          <span class="float-end post-date">0001-01-01
+</span>
+        </li></ul>
+    </div>
+  </section><div class="card component row post-comments">
+  <div class="card-header">
+    <h2 class="card-title">评论</h2>
+  </div>
+  <div class="card-body"><script src="https://utteranc.es/client.js"
+  repo="razonyang/hugo-theme-bootstrap-comments"
+  issue-term="pathname"
+  label="comment"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script></div>
+</div></div>
 </div><aside class="col-lg-4 sidebar d-flex">
   <div class="container">
     
@@ -332,9 +441,7 @@
         <i class="fa-fw fa-2x fab fa-qq"></i>
       </a><a class="nav-link social-link" target="_blank" href="https://www.zhihu.com/people/chen-xiang-60-27" title="Zhihu" rel="noopener noreferrer">
         <i class="fa-fw fa-2x fab fa-zhihu"></i>
-      </a><a class="nav-link social-link" target="_blank" href="/series/index.xml" title="RSS" rel="noopener noreferrer">
-      <i class="fas fa-fw fa-2x fa-rss"></i>
-    </a></nav>
+      </a></nav>
 <div class="copyright mb-2">
   Copyright © 2016-2021 Chen Xiang. All Rights Reserved.
 </div>

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 15 Dec 2021 16:37:51 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Dec 2021 12:01:51 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ascii转base64</title>
+      <link>/posts/ascii2base64/</link>
+      <pubDate>Thu, 16 Dec 2021 12:01:51 +0800</pubDate>
+      
+      <guid>/posts/ascii2base64/</guid>
+      <description>&lt;p&gt;ascii 转 base64 的规则&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>使用hugo搭建博客</title>
       <link>/posts/buildwebsite/</link>

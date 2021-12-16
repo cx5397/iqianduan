@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 15 Dec 2021 16:37:51 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Dec 2021 12:01:51 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ascii</title>
+      <link>/tags/ascii/</link>
+      <pubDate>Thu, 16 Dec 2021 12:01:51 +0800</pubDate>
+      
+      <guid>/tags/ascii/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>base64</title>
+      <link>/tags/base64/</link>
+      <pubDate>Thu, 16 Dec 2021 12:01:51 +0800</pubDate>
+      
+      <guid>/tags/base64/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>github page</title>
       <link>/tags/github-page/</link>
