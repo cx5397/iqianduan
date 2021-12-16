@@ -12,7 +12,7 @@
 <meta name="description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again." /><meta itemprop="name" content="使用hugo搭建博客">
 <meta itemprop="description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."><meta itemprop="datePublished" content="2021-12-15T16:37:51+08:00" />
 <meta itemprop="dateModified" content="2021-12-15T16:37:51+08:00" />
-<meta itemprop="wordCount" content="938">
+<meta itemprop="wordCount" content="1393">
 <meta itemprop="keywords" content="hugo,hugo-theme-bootstrap,github page," /><meta property="og:title" content="使用hugo搭建博客" />
 <meta property="og:description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again." />
 <meta property="og:type" content="article" />
@@ -239,7 +239,7 @@
   <span class="post-date" title="创建于 2021-12-15 08:37:51 &#43;0000 UTC。">
     2021-12-15
   </span><span class="post-reading-time">
-    2 分钟阅读
+    3 分钟阅读
   </span><span class="post-taxonomies"><a href="/categories/%E9%83%A8%E7%BD%B2/" class="badge rounded-pill post-taxonomy">部署</a><a href="/series/%E5%B7%A5%E5%85%B7/" class="badge rounded-pill post-taxonomy">工具</a><a href="/tags/hugo/" class="badge rounded-pill post-taxonomy">hugo</a><a href="/tags/hugo-theme-bootstrap/" class="badge rounded-pill post-taxonomy">hugo-theme-bootstrap</a><a href="/tags/github-page/" class="badge rounded-pill post-taxonomy">github page</a></span>
 </div>
 <div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
@@ -256,7 +256,7 @@
     <li><a href="#域名申请">域名申请</a></li>
     <li><a href="#icp-备案与免费静态服务器">icp 备案与免费静态服务器</a></li>
     <li><a href="#hugo-工程创建与编译">hugo 工程创建与编译</a></li>
-    <li><a href="#使用-github-actions-自动构建">使用 github Actions 自动构建</a></li>
+    <li><a href="#我们手动编译有点辛苦我们可以用-github-actions-自动构建来优化流程这样每次修改就会自动编译部署">我们手动编译，有点辛苦，我们可以用 github Actions 自动构建，来优化流程，这样每次修改，就会自动编译，部署</a></li>
     <li><a href="#域名解析与-github-page-设置">域名解析与 github page 设置</a></li>
   </ul>
 </nav>
@@ -283,24 +283,70 @@
 <li>将解压的可执行文件路径 bin 目录加入环境变量 path</li>
 <li>新开 cmd 命令窗口，创建工程</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>hugo new site myblog
-<span class="ln">2</span>cd myblog
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>hugo new site myblog
+<span class="ln">2</span><span class="nb">cd</span> myblog
 <span class="ln">3</span>新建目录themes
 </code></pre></div><ol start="4">
 <li>将<a href="https://github.com/cx5397/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">hugo-theme-bootstrap</a>
 下载下来放在 themes 目录下</li>
 <li>在 myblog 工程根目录下执行下列命令</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>cp -a themes/hugo-theme-bootstrap/exampleSite/* .
-<span class="ln">2</span>//如果你使用的是 Windows，请改用 xcopy .\themes\hugo-theme-bootstrap\exampleSite /E
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>cp -a themes/hugo-theme-bootstrap/exampleSite/* .
+<span class="ln">2</span>//如果你使用的是 Windows，请改用 xcopy .<span class="se">\t</span>hemes<span class="se">\h</span>ugo-theme-bootstrap<span class="se">\e</span>xampleSite /E
 </code></pre></div><ol start="6">
 <li>运行工程 <code>hugo server --watch</code></li>
 <li>编译文件到 docs 目录下 <code>hugo -d docs</code></li>
 <li>将整个工程提交到 github 仓库中</li>
 </ol>
-<h2 id="使用-github-actions-自动构建">使用 github Actions 自动构建</h2>
+<h2 id="我们手动编译有点辛苦我们可以用-github-actions-自动构建来优化流程这样每次修改就会自动编译部署">我们手动编译，有点辛苦，我们可以用 github Actions 自动构建，来优化流程，这样每次修改，就会自动编译，部署</h2>
 <ol>
-<li>配置 Action 项</li>
+<li>配置 settings pages 项,部署分支改为 gh-pages,目录选择/root,工作流编译的代码会放在这里</li>
+<li>配置 Actions 项，点击最上面的<code>set up a workflow yourself</code>， 将下面的工作流代码复制进.github/workflows/你的分支名.yml，然后 start commit</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="ln"> 1</span># This is a basic workflow to help you get started with Actions
+<span class="ln"> 2</span>name: CI
+<span class="ln"> 3</span># Controls when the workflow will run
+<span class="ln"> 4</span>
+<span class="ln"> 5</span>on:
+<span class="ln"> 6</span># Triggers the workflow on push or pull request events but only for the main branch
+<span class="ln"> 7</span>push:
+<span class="ln"> 8</span>branches: [main]
+<span class="ln"> 9</span>pull_request:
+<span class="ln">10</span>branches: [main]
+<span class="ln">11</span># Allows you to run this workflow manually from the Actions tab
+<span class="ln">12</span>workflow_dispatch:
+<span class="ln">13</span># A workflow run is made up of one or more jobs that can run sequentially or in parallel
+<span class="ln">14</span>jobs:
+<span class="ln">15</span># This workflow contains a single job called &#34;build&#34;
+<span class="ln">16</span>build: # The type of runner that the job will run on
+<span class="ln">17</span>runs-on: ubuntu-latest
+<span class="ln">18</span>    # Steps represent a sequence of tasks that will be executed as part of the job
+<span class="ln">19</span>    steps:
+<span class="ln">20</span>      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+<span class="ln">21</span>      - uses: actions/checkout@v2
+<span class="ln">22</span>
+<span class="ln">23</span>      # Runs a single command using the runners shell
+<span class="ln">24</span>      - name: Run a one-line script
+<span class="ln">25</span>        run: echo Hello, world!
+<span class="ln">26</span>
+<span class="ln">27</span>      - name: Setup Hugo
+<span class="ln">28</span>        uses: peaceiris/actions-hugo@v2
+<span class="ln">29</span>        with:
+<span class="ln">30</span>          hugo-version: &#34;0.90.1&#34;
+<span class="ln">31</span>          # extended: true
+<span class="ln">32</span>
+<span class="ln">33</span>      - name: Build
+<span class="ln">34</span>        run: hugo -d docs
+<span class="ln">35</span>
+<span class="ln">36</span>      # 将main分支打包后的docs文件夹内容放到gh-pages分支上
+<span class="ln">37</span>      - name: Deploy
+<span class="ln">38</span>        uses: peaceiris/actions-gh-pages@v3
+<span class="ln">39</span>        if: ${{ github.ref == &#39;refs/heads/main&#39; }}
+<span class="ln">40</span>        with:
+<span class="ln">41</span>          github_token: ${{ secrets.GITHUB_TOKEN }}
+<span class="ln">42</span>          publish_dir: ./docs
+</code></pre></div><ol start="3">
+<li>提交代码后，再次进入 Actions,你就可以看到 workflows 运行情况，点击具体的任务，可以重新跑这个任务，查看 workflow 具体的执行步骤</li>
 </ol>
 <h2 id="域名解析与-github-page-设置">域名解析与 github page 设置</h2>
 <ol>
