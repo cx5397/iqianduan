@@ -3,8 +3,10 @@
 个人博客
 
 # 打包
-
+```
 hugo -d docs
+//本工程已经开通github workflows 不再需要手工打包了
+```
 
 # 运行
 
