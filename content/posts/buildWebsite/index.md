@@ -56,7 +56,7 @@ The world’s fastest framework for building websites
 2. 将解压的可执行文件路径 bin 目录加入环境变量 path
 3. 新开 cmd 命令窗口，创建工程
 
-```
+```bash
 hugo new site myblog
 cd myblog
 新建目录themes
@@ -65,7 +65,7 @@ cd myblog
 4. 将[hugo-theme-bootstrap](https://github.com/cx5397/hugo-theme-bootstrap)下载下来放在 themes 目录下
 5. 在 myblog 工程根目录下执行下列命令
 
-```
+```bash
 cp -a themes/hugo-theme-bootstrap/exampleSite/* .
 //如果你使用的是 Windows，请改用 xcopy .\themes\hugo-theme-bootstrap\exampleSite /E
 ```
@@ -74,9 +74,57 @@ cp -a themes/hugo-theme-bootstrap/exampleSite/* .
 7. 编译文件到 docs 目录下 `hugo -d docs`
 8. 将整个工程提交到 github 仓库中
 
-## 使用 github Actions 自动构建
+## 我们手动编译，有点辛苦，我们可以用 github Actions 自动构建，来优化流程，这样每次修改，就会自动编译，部署
 
-1. 配置 Action 项
+1. 配置 settings pages 项,部署分支改为 gh-pages,目录选择/root,工作流编译的代码会放在这里
+2. 配置 Actions 项，点击最上面的`set up a workflow yourself`， 将下面的工作流代码复制进.github/workflows/你的分支名.yml，然后 start commit
+
+```text
+# This is a basic workflow to help you get started with Actions
+name: CI
+# Controls when the workflow will run
+
+on:
+# Triggers the workflow on push or pull request events but only for the main branch
+push:
+branches: [main]
+pull_request:
+branches: [main]
+# Allows you to run this workflow manually from the Actions tab
+workflow_dispatch:
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+# This workflow contains a single job called "build"
+build: # The type of runner that the job will run on
+runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.90.1"
+          # extended: true
+
+      - name: Build
+        run: hugo -d docs
+
+      # 将main分支打包后的docs文件夹内容放到gh-pages分支上
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+```
+
+3. 提交代码后，再次进入 Actions,你就可以看到 workflows 运行情况，点击具体的任务，可以重新跑这个任务，查看 workflow 具体的执行步骤
 
 ## 域名解析与 github page 设置
 
