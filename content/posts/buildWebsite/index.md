@@ -76,6 +76,8 @@ cp -a themes/hugo-theme-bootstrap/exampleSite/* .
 
 ## 使用 github Actions 自动构建
 
+1. 配置 Action 项
+
 ## 域名解析与 github page 设置
 
 1. 在域名服务商将域名 CNAME 到 github 服务器，格式为 github 用户名.github.io（@记录为不带 www 的域名解析）
