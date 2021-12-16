@@ -56,7 +56,7 @@ The world’s fastest framework for building websites
 2. 将解压的可执行文件路径 bin 目录加入环境变量 path
 3. 新开 cmd 命令窗口，创建工程
 
-```bash
+```text
 hugo new site myblog
 cd myblog
 新建目录themes
@@ -65,7 +65,7 @@ cd myblog
 4. 将[hugo-theme-bootstrap](https://github.com/cx5397/hugo-theme-bootstrap)下载下来放在 themes 目录下
 5. 在 myblog 工程根目录下执行下列命令
 
-```bash
+```text
 cp -a themes/hugo-theme-bootstrap/exampleSite/* .
 //如果你使用的是 Windows，请改用 xcopy .\themes\hugo-theme-bootstrap\exampleSite /E
 ```
@@ -74,7 +74,7 @@ cp -a themes/hugo-theme-bootstrap/exampleSite/* .
 7. 编译文件到 docs 目录下 `hugo -d docs`
 8. 将整个工程提交到 github 仓库中
 
-## 我们手动编译，有点辛苦，我们可以用 github Actions 自动构建，来优化流程，这样每次修改，就会自动编译，部署
+## 我们可以用 github Actions 自动构建，来优化流程，这样每次 commit，就会自动编译，部署
 
 1. 配置 settings pages 项,部署分支改为 gh-pages,目录选择/root,工作流编译的代码会放在这里
 2. 配置 Actions 项，点击最上面的`set up a workflow yourself`， 将下面的工作流代码复制进.github/workflows/你的分支名.yml，然后 start commit
