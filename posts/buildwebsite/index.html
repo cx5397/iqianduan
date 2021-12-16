@@ -256,8 +256,8 @@
     <li><a href="#域名申请">域名申请</a></li>
     <li><a href="#icp-备案与免费静态服务器">icp 备案与免费静态服务器</a></li>
     <li><a href="#hugo-工程创建与编译">hugo 工程创建与编译</a></li>
-    <li><a href="#我们可以用-github-actions-自动构建来优化流程这样每次-commit就会自动编译部署">我们可以用 github Actions 自动构建，来优化流程，这样每次 commit，就会自动编译，部署</a></li>
     <li><a href="#域名解析与-github-page-设置">域名解析与 github page 设置</a></li>
+    <li><a href="#我们可以用-github-actions-自动构建来优化流程这样每次-commit就会自动编译部署">我们可以用 github Actions 自动构建，来优化流程，这样每次 commit，就会自动编译，部署</a></li>
   </ul>
 </nav>
   </div>
@@ -297,6 +297,23 @@
 <li>运行工程 <code>hugo server --watch</code></li>
 <li>编译文件到 docs 目录下 <code>hugo -d docs</code></li>
 <li>将整个工程提交到 github 仓库中</li>
+</ol>
+<h2 id="域名解析与-github-page-设置">域名解析与 github page 设置</h2>
+<ol>
+<li>在域名服务商将域名 CNAME 到 github 服务器，格式为 github 用户名.github.io（@记录为不带 www 的域名解析）
+<img class="img-fluid" alt="域名解析" src="/posts/buildwebsite/images/aliyun.png" loading="lazy"
+   width="1002" height="540"
+   />
+
+</li>
+<li>点开刚刚提交到的 github 仓库，进入 settings 目录</li>
+<li>找到 GitHub Pages,点击 Check it out here</li>
+<li>填写代码所在分支，选择/docs 目录，点保存，Custom domain 填写自己刚刚解析的域名地址，点保存
+<img class="img-fluid" alt="github page配置" src="/posts/buildwebsite/images/page.png" loading="lazy"
+   width="1141" height="559"
+   />
+
+</li>
 </ol>
 <h2 id="我们可以用-github-actions-自动构建来优化流程这样每次-commit就会自动编译部署">我们可以用 github Actions 自动构建，来优化流程，这样每次 commit，就会自动编译，部署</h2>
 <ol>
@@ -347,23 +364,6 @@
 <span class="ln">42</span>          publish_dir: ./docs
 </code></pre></div><ol start="3">
 <li>提交代码后，再次进入 Actions,你就可以看到 workflows 运行情况，点击具体的任务，可以重新跑这个任务，查看 workflow 具体的执行步骤</li>
-</ol>
-<h2 id="域名解析与-github-page-设置">域名解析与 github page 设置</h2>
-<ol>
-<li>在域名服务商将域名 CNAME 到 github 服务器，格式为 github 用户名.github.io（@记录为不带 www 的域名解析）
-<img class="img-fluid" alt="域名解析" src="/posts/buildwebsite/images/aliyun.png" loading="lazy"
-   width="1002" height="540"
-   />
-
-</li>
-<li>点开刚刚提交到的 github 仓库，进入 settings 目录</li>
-<li>找到 GitHub Pages,点击 Check it out here</li>
-<li>填写代码所在分支，选择/docs 目录，点保存，Custom domain 填写自己刚刚解析的域名地址，点保存
-<img class="img-fluid" alt="github page配置" src="/posts/buildwebsite/images/page.png" loading="lazy"
-   width="1141" height="559"
-   />
-
-</li>
 </ol></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
