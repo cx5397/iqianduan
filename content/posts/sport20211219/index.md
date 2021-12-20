@@ -1,5 +1,5 @@
 +++
-title = "羊台山大环户外"
+title = "羊台山大环徒步"
 description = "羊台山大环难度极大，是一条非常变态的路线"
 date = 2021-12-19T16:10:51+08:00
 featured = false
