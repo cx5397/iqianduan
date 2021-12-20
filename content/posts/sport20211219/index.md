@@ -46,8 +46,6 @@ images = []
 
 女大神上坡都是跑的，好厉害
 
-<video id="video" controls="" preload="none" poster="女大神">
-      <source id="mp4" src="images/pao.mp4" type="video/mp4">
-</videos>
+<iframe src="images/pao.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 通过这次户外，认识到了运动需要一步步提升，强来容易带来身体上的伤害，需要先找难度低一点的，等体能提升了再慢慢挑战难一点的运动。
