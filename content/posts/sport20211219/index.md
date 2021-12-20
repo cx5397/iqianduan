@@ -46,7 +46,7 @@ images = []
 
 女大神上坡都是跑的，好厉害
 
-<video  autoplay muted loop playsinline>
+<video  autoplay muted loop playsinline style="width:100%" >
   <source src="images/pao.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
