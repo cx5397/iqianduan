@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 16 Dec 2021 12:01:51 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Dec 2021 16:10:51 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>爬山</title>
+      <link>/categories/%E7%88%AC%E5%B1%B1/</link>
+      <pubDate>Sun, 19 Dec 2021 16:10:51 +0800</pubDate>
+      
+      <guid>/categories/%E7%88%AC%E5%B1%B1/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>编码</title>
       <link>/categories/%E7%BC%96%E7%A0%81/</link>

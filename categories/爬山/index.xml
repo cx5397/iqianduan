@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>爬山 on xiang blog</title>
+    <link>/categories/%E7%88%AC%E5%B1%B1/</link>
+    <description>Recent content in 爬山 on xiang blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 19 Dec 2021 16:10:51 +0800</lastBuildDate><atom:link href="/categories/%E7%88%AC%E5%B1%B1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>羊台山大环户外</title>
+      <link>/posts/sport20211219/</link>
+      <pubDate>Sun, 19 Dec 2021 16:10:51 +0800</pubDate>
+      
+      <guid>/posts/sport20211219/</guid>
+      <description>&lt;p&gt;阳台山大环路线，全程42公里，相当于爬8次大阳台&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
