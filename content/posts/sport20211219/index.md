@@ -40,7 +40,7 @@ images = []
 
 ![个人成绩](images/cj.jpg)
 
-完赛的大神成绩汇总
+完赛的大神成绩汇总单
 
 ![成绩汇总](images/cjhz.jpg)
 
