@@ -30,7 +30,7 @@ images = []
 ## 2.技能点查漏补缺(主要来源于附件图)
 
 ##### internet
-- How does the internetwork ?
+- How does the internet work ?
 - What is HTTP?
 - Browsers and how they work ?
 - DNS and how it works?
@@ -49,8 +49,8 @@ images = []
 - Learn the basics
 - Making Layouts (Floats, Positioning, Display, Box Model, CSS Grid, Flex Box)
 - Responsive design and Media Queries
-- sass
-- BEM
+- [sass](https://www.sass.hk/docs/)
+- [BEM](https://zhuanlan.zhihu.com/p/36324851)
 - Styled Component
 - CSS Modules
 
@@ -58,17 +58,16 @@ images = []
 - iconfont
 - [Sketch](https://www.sketch.com/)
 - [PhotoShop](https://www.adobe.com/cn/products/cs6/photoshop.html)
-- [PxCook](https://www.fancynode.com.cn/pxcook)
 
 ##### JavaScript
 - Syntax and Basic Construct
-- Learn DOM Manipulation
-- Learn FetchAPI/Ajax(XHR)
-- ES6+ and modular JavaScript
+- [Learn DOM Manipulation](https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model/Introduction)
+- Learn [FetchAPI](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)/[Ajax(XHR)](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
+- [ES6+ and modular JavaScript](https://es6.ruanyifeng.com/)
 - Understand the conceptsHoisting ，EventBubbling，Scope，Prototype ，ShadowDOM，strict
 
 ##### Version Control Systems
-- Basic Usage of Git
+- [Basic Usage of Git](https://git-scm.com/docs)
 - github
 - gitlab
 
@@ -79,66 +78,66 @@ images = []
 - OWASP Security Risks
 
 ##### Package Managers
-- npm
+- [npm](https://www.npmjs.cn/)
 - cnpm
 
 ###### Build Tools
 - Task Runners(npm scripts)
-- Module Bundlers(webpack)
-- Linters and For matters(ESLint,Prettier)
+- Module Bundlers([webpack](https://webpack.docschina.org/concepts/))
+- Linters and For matters([ESLint](https://eslint.bootcss.com/docs/user-guide/getting-started),[Prettier](https://prettier.io/docs/en/index.html))
 
 ##### Pick a Framework
-- Vue(vuex,vue-router,axios,element-ui)
-- React(Redux,Reactstrap,Material UI,Bootstrap)
+- [Vue](https://cn.vuejs.org/v2/guide/)([vuex](https://vuex.vuejs.org/zh/),[vue-router](https://router.vuejs.org/zh/),[axios](https://github.com/axios/axios),[element-ui](https://element.eleme.cn/#/zh-CN))
+- [React](https://zh-hans.reactjs.org/docs/getting-started.html)([Redux](https://www.redux.org.cn/),[Reactstrap](https://reactstrap.github.io/?path=/story/home-installation--page),Material UI,Bootstrap)
 
 ##### Web Components
 - HTML Templates
 - Custom Elements
-- Shadow DOM
+- [Shadow DOM](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components/Using_shadow_DOM)
 
 ##### Testing your Apps
-- Jest
+- [Jest](https://www.jestjs.cn/docs/getting-started)
 
 ##### Type Checkers
-- TypeScript
+- [TypeScript](https://www.tslang.cn/docs/handbook/basic-types.html)
 
 ##### Progressive Web Apps
 - Storage
-- Web Sockets
-- Service Workers
+- [Web Sockets](https://www.ruanyifeng.com/blog/2017/05/websocket.html)
+- [Service Workers](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - PRPL Pattern
 - RAIL Model
 - Performance Metrics
 - Using Lighthouse
 
 ##### ServerSide Rendering (SSR)
-- React(Next.js)
-- Vue(Nuxt.js)
+- [React(Next.js)](https://www.nextjs.cn/docs/getting-started)
+- [Vue(Nuxt.js)](https://www.nuxtjs.cn/guide/installation)
 
 ##### GraphQL
-- Apollo
+- [Apollo](https://www.apollographql.com/docs/)
 
 ##### Static Site Generators
 - Next.js
 - GatsbyJS
-- Hugo
+- [Hugo](https://www.gohugo.org/doc/)
 - Jekyll
 - Nuxt.js
 
 ##### Mobile Applications
-- React Native
+- [React Native](https://www.react-native.cn/docs/getting-started)
 
 ##### Desktop Applictions
-- Electron
+- [Electron](https://www.electronjs.org/zh/docs/latest/)
 
 ##### Web Assembly(WASM)
-- Go
+- [Go](http://docscn.studygolang.com/doc/)
 
 ##### 开发工具
-- vscode
-- Fiddler或Charles
+- [vscode](https://code.visualstudio.com/docs)
+- [Fiddler](https://www.telerik.com/support/fiddler-everywhere)或Charles
 - Postman
-- Chrome DevTools
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/?utm_source=devtools)
 
 ##### 可视化
 - [SVG](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial)
@@ -151,9 +150,9 @@ images = []
 - [WebGL](https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API)
 	- [Three](https://threejs.org/)
 
-##### 微服务
-- qiankun
-- single-spa
+##### 微前端
+- [qiankun](https://qiankun.umijs.org/zh)
+- [single-spa](https://zh-hans.single-spa.js.org/docs/getting-started-overview)
 
 ##### 设计模式
 - [单例模式](http://www.alloyteam.com/2012/10/common-javascript-design-patterns/)
