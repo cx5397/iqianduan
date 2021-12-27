@@ -7,7 +7,61 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 20 Dec 2021 20:10:51 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Dec 2021 11:37:51 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>exec</title>
+      <link>/tags/exec/</link>
+      <pubDate>Sun, 26 Dec 2021 11:37:51 +0800</pubDate>
+      
+      <guid>/tags/exec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>match</title>
+      <link>/tags/match/</link>
+      <pubDate>Sun, 26 Dec 2021 11:37:51 +0800</pubDate>
+      
+      <guid>/tags/match/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>replace</title>
+      <link>/tags/replace/</link>
+      <pubDate>Sun, 26 Dec 2021 11:37:51 +0800</pubDate>
+      
+      <guid>/tags/replace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>search</title>
+      <link>/tags/search/</link>
+      <pubDate>Sun, 26 Dec 2021 11:37:51 +0800</pubDate>
+      
+      <guid>/tags/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>split</title>
+      <link>/tags/split/</link>
+      <pubDate>Sun, 26 Dec 2021 11:37:51 +0800</pubDate>
+      
+      <guid>/tags/split/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>/tags/test/</link>
+      <pubDate>Sun, 26 Dec 2021 11:37:51 +0800</pubDate>
+      
+      <guid>/tags/test/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>技能点</title>
       <link>/tags/%E6%8A%80%E8%83%BD%E7%82%B9/</link>

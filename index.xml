@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 20 Dec 2021 20:10:51 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Dec 2021 11:37:51 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用正则的场景</title>
+      <link>/posts/regexpfunc/</link>
+      <pubDate>Sun, 26 Dec 2021 11:37:51 +0800</pubDate>
+      
+      <guid>/posts/regexpfunc/</guid>
+      <description>&lt;p&gt;字符串与正则相关的使用方法&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>前端学习路线图</title>
       <link>/posts/guide/</link>
