@@ -33,12 +33,14 @@ images = []
   `$ git config --global user.name "John Doe"`
   `$ git config --global user.email johndoe@example.com`
 - 克隆仓库 `$ git clone git://github.com/schacon/ticgit.git`
-- git clone 只能 clone 远程库的 master 分支，无法 clone 所有分支，`git checkout -b develop origin/develop`，作用是 checkout 远程的 develop 分支，在本地起名为 develop 分支，并切换到本地的 develop 分支
+- git clone 只能 clone 远程库的 master 分支，无法 clone 所有分支
 
 #### branch 操作
 
-- 创建分支 `git branch 分支名;git checkout分支名，git checkout -b 分支名`
-- 删除某分支 `git branch -d 分支名`
+- 创建分支 `git branch 分支名;`
+- 切换分支 `git checkout 分支名，`
+- 创建分支并切换到对应分支`git checkout -b 分支名 [origin/branchName]`
+- 删除本地某分支 `git branch -d 分支名`
 - 查看本地分支情况 `git branch`
 - 查看远程分支 `git branch -r`
 - 分支重命名 `git branch -m oldname newname`

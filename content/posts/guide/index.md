@@ -31,7 +31,7 @@ images = []
 
 ##### internet
 - How does the internet work ?
-- What is HTTP?
+- [What is HTTP?](https://juejin.cn/post/6844904100035821575)
 - Browsers and how they work ?
 - DNS and how it works?
 - What is Domain Name ?
@@ -49,7 +49,7 @@ images = []
 - Learn the basics
 - Making Layouts (Floats, Positioning, Display, Box Model, CSS Grid, Flex Box)
 - Responsive design and Media Queries
-- [sass](https://www.sass.hk/docs/)
+- [sass](https://sass-lang.com/documentation)
 - [BEM](https://zhuanlan.zhihu.com/p/36324851)
 - Styled Component
 - CSS Modules
@@ -138,6 +138,9 @@ images = []
 - [Fiddler](https://www.telerik.com/support/fiddler-everywhere)或Charles
 - Postman
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/?utm_source=devtools)
+
+##### 自制工具
+- 创建项目cli工具
 
 ##### 可视化
 - [SVG](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial)
