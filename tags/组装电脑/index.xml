@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>组装电脑 on 爱前端</title>
+    <link>/tags/%E7%BB%84%E8%A3%85%E7%94%B5%E8%84%91/</link>
+    <description>Recent content in 组装电脑 on 爱前端</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
+    <lastBuildDate>Thu, 28 Apr 2022 16:10:51 +0800</lastBuildDate><atom:link href="/tags/%E7%BB%84%E8%A3%85%E7%94%B5%E8%84%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>配一台电脑</title>
+      <link>/posts/computer/</link>
+      <pubDate>Thu, 28 Apr 2022 16:10:51 +0800</pubDate>
+      
+      <guid>/posts/computer/</guid>
+      <description>&lt;p&gt;小白自己组装电脑&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>test on xiang blog</title>
+    <title>test on 爱前端</title>
     <link>/tags/test/</link>
-    <description>Recent content in test on xiang blog</description>
+    <description>Recent content in test on 爱前端</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>

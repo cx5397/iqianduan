@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>部署 on xiang blog</title>
+    <title>部署 on 爱前端</title>
     <link>/categories/%E9%83%A8%E7%BD%B2/</link>
-    <description>Recent content in 部署 on xiang blog</description>
+    <description>Recent content in 部署 on 爱前端</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
