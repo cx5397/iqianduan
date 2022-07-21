@@ -21,8 +21,6 @@ series = [
 images = []
 +++
 
-常用 git 命令，和相关产品的配置
-
 <!--more-->
 
 ## git 命令

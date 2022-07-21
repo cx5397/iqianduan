@@ -20,8 +20,6 @@ series = [
 images = []
 +++
 
-The world’s fastest framework for building websites
-
 <!--more-->
 
 ## 前言
