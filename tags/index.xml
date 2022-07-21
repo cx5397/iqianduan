@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 28 Apr 2022 16:10:51 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Jul 2022 14:10:51 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cache</title>
+      <link>/tags/cache/</link>
+      <pubDate>Thu, 21 Jul 2022 14:10:51 +0800</pubDate>
+      
+      <guid>/tags/cache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>/tags/nginx/</link>
+      <pubDate>Thu, 21 Jul 2022 14:10:51 +0800</pubDate>
+      
+      <guid>/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prettier</title>
+      <link>/tags/prettier/</link>
+      <pubDate>Thu, 21 Jul 2022 12:10:51 +0800</pubDate>
+      
+      <guid>/tags/prettier/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>组装电脑</title>
       <link>/tags/%E7%BB%84%E8%A3%85%E7%94%B5%E8%84%91/</link>

@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 28 Apr 2022 16:10:51 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Jul 2022 14:10:51 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nginx相关配置</title>
+      <link>/posts/nginx/</link>
+      <pubDate>Thu, 21 Jul 2022 14:10:51 +0800</pubDate>
+      
+      <guid>/posts/nginx/</guid>
+      <description>&lt;p&gt;nginx 安全头，服务器信息隐藏，安全访问控制等&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>浏览器缓存过程</title>
+      <link>/posts/cache/</link>
+      <pubDate>Thu, 21 Jul 2022 14:10:51 +0800</pubDate>
+      
+      <guid>/posts/cache/</guid>
+      <description>&lt;p&gt;浏览器缓存文件，提高访问效率，主要通过比对文件是否过期&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>prettier格式化函数名后(之间出现空格</title>
+      <link>/posts/prettier/</link>
+      <pubDate>Thu, 21 Jul 2022 12:10:51 +0800</pubDate>
+      
+      <guid>/posts/prettier/</guid>
+      <description>&lt;p&gt;prettier 格式化函数名后(之间出现空格&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>配一台电脑</title>
       <link>/posts/computer/</link>
