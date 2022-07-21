@@ -2,7 +2,12 @@
 
 个人博客
 
+# 编写
+
+- 内容写在 content/posts 下
+
 # 打包
+
 ```
 hugo -d docs
 //本工程已经开通github workflows 不再需要手工打包了
