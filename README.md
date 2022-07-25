@@ -23,10 +23,11 @@ hugo server --watch
 
 # categories
 
-- 计算机基础
-- 环境
-- 浏览器
-- 生活
-- 工具
-- 清单
-- 对象
+- 计算机基础 computer
+- 环境 environment(开发、部署)
+- 浏览器 browser
+- 生活 days
+- 工具 tools
+- 清单 lists（导航、汇总）
+- 对象 objects
+- vue
