@@ -7,7 +7,7 @@ comment = true
 toc = true
 reward = true
 categories = [
-  "部署"
+  "环境"
 ]
 series = [
   "博客"

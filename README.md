@@ -24,7 +24,7 @@ hugo server --watch
 # categories
 
 - 计算机基础
-- 部署
+- 环境
 - 浏览器
 - 生活
 - 工具
