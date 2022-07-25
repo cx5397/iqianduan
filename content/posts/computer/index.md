@@ -7,14 +7,16 @@ comment = true
 toc = true
 reward = true
 categories = [
-  "台式机"
-]
-tags = [
-  '组装电脑'
+  "生活"
 ]
 series = [
-  "电子产品"
+  "计算机div"
 ]
+tags = [
+  '12400'，
+  'b660'
+]
+
 images = []
 +++
 

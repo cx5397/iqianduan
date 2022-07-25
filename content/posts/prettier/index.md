@@ -7,14 +7,15 @@ comment = true
 toc = true
 reward = true
 categories = [
-  "前端"
-]
-tags = [
-  'prettier'
+  "工具"
 ]
 series = [
   "代码格式化"
 ]
+tags = [
+  'prettier'
+]
+
 images = []
 +++
 

@@ -9,14 +9,15 @@ reward = true
 categories = [
   "部署"
 ]
+series = [
+  "博客"
+]
 tags = [
   'hugo',
   'hugo-theme-bootstrap',
   'github page'
 ]
-series = [
-  "工具"
-]
+
 images = []
 +++
 

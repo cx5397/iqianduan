@@ -7,14 +7,15 @@ comment = true
 toc = true
 reward = true
 categories = [
-  "前端"
+  "清单"
+]
+series = [
+  "前端规划"
 ]
 tags = [
   '技能点'
 ]
-series = [
-  "规划"
-]
+
 images = []
 +++
 

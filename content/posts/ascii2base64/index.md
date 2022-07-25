@@ -7,15 +7,16 @@ comment = true
 toc = true
 reward = true
 categories = [
+  "计算机基础"
+]
+series = [
   "编码"
 ]
 tags = [
   "base64",
   "ascii",
 ]
-series = [
-  "原理"
-]
+
 images = []
 +++
 

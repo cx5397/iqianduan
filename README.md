@@ -20,3 +20,13 @@ hugo server --watch
 # 相关链接
 
 - [hugo-theme-bootstrap](https://hbs.razonyang.com/)
+
+# categories
+
+- 计算机基础
+- 部署
+- 浏览器
+- 生活
+- 工具
+- 清单
+- 对象

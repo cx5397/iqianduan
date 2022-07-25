@@ -7,14 +7,18 @@ comment = true
 toc = true
 reward = true
 categories = [
-  "前端"
-]
-tags = [
-  'cache'
+  "浏览器"
 ]
 series = [
-  "部署"
+  "缓存策略"
 ]
+tags = [
+  'etag',
+  'last-modified',
+  'cache-control',
+  'expires'
+]
+
 images = []
 +++
 

@@ -7,6 +7,9 @@ comment = true
 toc = true
 reward = true
 categories = [
+  "工具"
+]
+series = [
   "版本管理工具"
 ]
 tags = [
@@ -15,9 +18,7 @@ tags = [
   'tapd',
   'github'
 ]
-series = [
-  "工具"
-]
+
 images = []
 +++
 

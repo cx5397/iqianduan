@@ -7,14 +7,15 @@ comment = true
 toc = true
 reward = true
 categories = [
-  "前端"
+  "部署"
+]
+series = [
+  "静态服务器"
 ]
 tags = [
   'nginx'
 ]
-series = [
-  "部署"
-]
+
 images = []
 +++
 

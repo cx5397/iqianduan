@@ -7,6 +7,9 @@ comment = true
 toc = true
 reward = true
 categories = [
+  "对象"
+]
+series = [
   "正则"
 ]
 tags = [
@@ -18,9 +21,7 @@ tags = [
   'split'
  
 ]
-series = [
-  "javascript"
-]
+
 images = []
 +++
 

@@ -7,14 +7,15 @@ comment = true
 toc = true
 reward = true
 categories = [
-  "爬山"
+  "生活"
+]
+series = [
+  "户外"
 ]
 tags = [
   '阳台山'
 ]
-series = [
-  "游记"
-]
+
 images = []
 +++
 
