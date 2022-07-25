@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>类型转换 on 爱前端</title>
+    <link>/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</link>
+    <description>Recent content in 类型转换 on 爱前端</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
+    <lastBuildDate>Mon, 25 Jul 2022 10:10:51 +0800</lastBuildDate><atom:link href="/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>类型转换</title>
+      <link>/posts/object/type/</link>
+      <pubDate>Mon, 25 Jul 2022 10:10:51 +0800</pubDate>
+      
+      <guid>/posts/object/type/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

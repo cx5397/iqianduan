@@ -3,27 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>es2015新特性 - 爱前端</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
+    <title>类型转换 - 爱前端</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
 <link rel="icon" href="/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
 <link rel="icon" href="/images/icons/favicon.ico">
 <link rel="manifest" href="/manifest.json">
 <meta name="keywords" content="" />
-<meta name="description" content="es2015推出后，编码的改变" /><meta itemprop="name" content="es2015新特性">
-<meta itemprop="description" content="es2015推出后，编码的改变"><meta itemprop="datePublished" content="2022-07-25T09:10:51+08:00" />
-<meta itemprop="dateModified" content="2022-07-25T09:10:51+08:00" />
-<meta itemprop="wordCount" content="313">
-<meta itemprop="keywords" content="es2015," /><meta property="og:title" content="es2015新特性" />
-<meta property="og:description" content="es2015推出后，编码的改变" />
+<meta name="description" content="类型转换" /><meta itemprop="name" content="类型转换">
+<meta itemprop="description" content="类型转换"><meta itemprop="datePublished" content="2022-07-25T10:10:51+08:00" />
+<meta itemprop="dateModified" content="2022-07-25T10:10:51+08:00" />
+<meta itemprop="wordCount" content="471">
+<meta itemprop="keywords" content="类型转换," /><meta property="og:title" content="类型转换" />
+<meta property="og:description" content="类型转换" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/es2015feature/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-07-25T09:10:51+08:00" />
-<meta property="article:modified_time" content="2022-07-25T09:10:51+08:00" /><meta property="og:site_name" content="爱前端" />
+<meta property="og:url" content="/posts/object/type/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-25T10:10:51+08:00" />
+<meta property="article:modified_time" content="2022-07-25T10:10:51+08:00" /><meta property="og:site_name" content="爱前端" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="es2015新特性"/>
-<meta name="twitter:description" content="es2015推出后，编码的改变"/>
+<meta name="twitter:title" content="类型转换"/>
+<meta name="twitter:description" content="类型转换"/>
 <meta name="robots" content="index, follow" /><link rel="stylesheet" href="/css/bundle.min.ebfc87f7f6580e36e6640d41143a700b9ec6f4ff8e30ac45c6fb67b65d4fc1c0.css" integrity="sha256-6/yH9/ZYDjbmZA1BFDpwC57G9P&#43;OMKxFxvtntl1PwcA=" crossorigin="anonymous">
 <noscript><link rel="stylesheet" href="/css/bundle.min.ebfc87f7f6580e36e6640d41143a700b9ec6f4ff8e30ac45c6fb67b65d4fc1c0.css" integrity="sha256-6/yH9/ZYDjbmZA1BFDpwC57G9P&#43;OMKxFxvtntl1PwcA=" crossorigin="anonymous"></noscript></head>
   <body><script>const items=['mode','palette'];items.forEach(function(a){const b=localStorage.getItem('hbs-'+a);b&&document.body.parentElement.setAttribute('data-'+a,b)})</script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
@@ -50,11 +50,11 @@
   </div>
   <div class="offcanvas-body">
     <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=es2015%e6%96%b0%e7%89%b9%e6%80%a7&url=%2fposts%2fes2015feature%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2&url=%2fposts%2fobject%2ftype%2f">
       <i class="fab fa-fw fa-twitter"></i> Twitter
     </a>
     <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button"
-      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fes2015feature%2f">
+      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fobject%2ftype%2f">
       <i class="fab fa-fw fa-facebook-f"></i> Facebook
     </a>
   </div>
@@ -205,7 +205,7 @@
 <div class="col-lg-8">
   <div class="container"><nav class="row card component" aria-label="breadcrumb">
   <div class="card-body">
-    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">Posts</a></li><li class="breadcrumb-item active">Es2015新特性</li></ol>
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">Posts</a></li><li class="breadcrumb-item active">类型转换</li></ol>
   </div>
 </nav><article class="row card component mb-4 post"><div class="post-panel-wrapper">
   <div class="d-flex flex-column component rounded post-panel">
@@ -225,82 +225,79 @@
 ">
   <i class="fas fa-fw fa-copyright"></i>
 </a>
-    
+    <a class="action" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+  <i class="fas fa-fw fa-list-alt"></i>
+</a>
     
   </div>
 </div>
 <div class="card-header ">
-    <h1 class="card-title post-title">Es2015新特性
+    <h1 class="card-title post-title">类型转换
 </h1>
   </div>
   <div class="card-body"><div class="post-meta">
-  <span class="post-date" title="创建于 2022-07-25 01:10:51 &#43;0000 UTC。">
+  <span class="post-date" title="创建于 2022-07-25 02:10:51 &#43;0000 UTC。">
     2022-07-25
   </span><span class="post-reading-time">
     1 分钟阅读
-  </span><span class="post-taxonomies"><a href="/categories/%E6%B8%85%E5%8D%95/" class="badge rounded-pill post-taxonomy">清单</a><a href="/series/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/" class="badge rounded-pill post-taxonomy">编码规范</a><a href="/tags/es2015/" class="badge rounded-pill post-taxonomy">es2015</a></span>
+  </span><span class="post-taxonomies"><a href="/categories/%E5%AF%B9%E8%B1%A1/" class="badge rounded-pill post-taxonomy">对象</a><a href="/series/%E7%B1%BB%E5%9E%8B/" class="badge rounded-pill post-taxonomy">类型</a><a href="/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" class="badge rounded-pill post-taxonomy">类型转换</a></span>
 </div>
-<div class="post-content mb-3"><h1 id="es2015es6-core-featureshttpexploringjscomes6ch_core-featureshtmlsec_from-iifes-to-blocks"><a href="http://exploringjs.com/es6/ch_core-features.html#sec_from-iifes-to-blocks" target="_blank" rel="noopener noreferrer">es2015(es6) Core features</a>
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+  </div>
+  <div class="offcanvas-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#numberxx-能转成功的有-1-数字2-纯数字字符串会自动去掉前后空格parseint-也是3-空字符串4true5false6null7最多只有一个元素且是-12-情况x-转化过程-1先调用-valueof-2如果返回对象则调用-tostring-3还是对象就报错">Number(x),x 能转成功的有 1 数字,2 纯数字字符串(会自动去掉前后空格，parseInt 也是),3 空字符串,4true,5false,6null,7[最多只有一个元素且是 1,2 情况]；x 转化过程 1.先调用 valueOf 2.如果返回对象则调用 toString 3.还是对象就报错</a></li>
+    <li><a href="#stringx-x-转化过程1调用-tostring2返回是对象再调用-valueof3还是对象报错">String(x) x 转化过程,1.调用 toString,2.返回是对象再调用 valueOf,3.还是对象报错</a></li>
+    <li><a href="#booleanx-x-为-undefinednull-00nan为-false其余全部为-true">Boolean(x) x 为 undefined、null、-0、+0、NaN、''、为 false，其余全部为 true</a></li>
+    <li><a href="#自动转换">自动转换</a>
+      <ul>
+        <li><a href="#自动转换场景">自动转换场景</a></li>
+        <li><a href="#自动转化规则">自动转化规则</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div><div class="post-content mb-3"><h1 id="类型转换httpjavascriptruanyifengcomgrammarconversionhtml"><a href="http://javascript.ruanyifeng.com/grammar/conversion.html" target="_blank" rel="noopener noreferrer">类型转换</a>
 </h1>
+<h2 id="numberxx-能转成功的有-1-数字2-纯数字字符串会自动去掉前后空格parseint-也是3-空字符串4true5false6null7最多只有一个元素且是-12-情况x-转化过程-1先调用-valueof-2如果返回对象则调用-tostring-3还是对象就报错">Number(x),x 能转成功的有 1 数字,2 纯数字字符串(会自动去掉前后空格，parseInt 也是),3 空字符串,4true,5false,6null,7[最多只有一个元素且是 1,2 情况]；x 转化过程 1.先调用 valueOf 2.如果返回对象则调用 toString 3.还是对象就报错</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span> Number(123|&#39;123&#39;) //123
+<span class="ln">2</span> Number(&#39;123abc&#39;) //NaN
+<span class="ln">3</span> Number.parseInt(&#39;123abc&#39;) //123
+<span class="ln">4</span> Number(true|false) //1|0
+<span class="ln">5</span> Number(null|undefined) //0|NaN
+<span class="ln">6</span> Number([]) //0
+<span class="ln">7</span> Number([1]) //1
+<span class="ln">8</span> Number({}) //NaN
+</code></pre></div><h2 id="stringx-x-转化过程1调用-tostring2返回是对象再调用-valueof3还是对象报错">String(x) x 转化过程,1.调用 toString,2.返回是对象再调用 valueOf,3.还是对象报错</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>String(122) //&#34;122&#34;
+<span class="ln">2</span>String(&#39;123&#39;) //&#34;123&#34;
+<span class="ln">3</span>String(true|false) //&#34;true&#34;|&#34;false&#34;
+<span class="ln">4</span>String(undefined|null)//&#34;undefined&#34;|&#34;null&#34;
+<span class="ln">5</span>String({}) //&#34;[object Object]&#34;
+<span class="ln">6</span>String([1,2,3]) //&#34;1,2,3&#34;
+</code></pre></div><h2 id="booleanx-x-为-undefinednull-00nan为-false其余全部为-true">Boolean(x) x 为 undefined、null、-0、+0、NaN、''、为 false，其余全部为 true</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>Boolean(new Boolean(false)) //true
+</code></pre></div><h2 id="自动转换">自动转换</h2>
+<h3 id="自动转换场景">自动转换场景</h3>
 <ul>
-<li>From var to const/let (var 声明的全局变量，会加入 window 对象，千万不要用 var！)</li>
-<li>From IIFEs(函数包裹作用域,立即执行函数) to blocks({})</li>
-<li>From concatenating strings(拼接字符串 +) to template literals(模版字符串`${}`)</li>
-<li>From function expressions to arrow functions</li>
-<li>Multiple return values via(通过) objects 解构赋值</li>
-<li>From for to forEach() to for-of 数组遍历优先级 for=&gt;forEach=&gt;for of</li>
-<li>Handling parameter default values 函数申明默认参数</li>
-<li>Handling named parameters</li>
+<li>不同类型的数据相互运算(123+&lsquo;abc&rsquo;)</li>
+<li>对非布尔值类型的数据求布尔值(if(&lsquo;abc&rsquo;){})</li>
+<li>对非数值类型的值使用一元运算符(+ -)</li>
 </ul>
-<pre>
-function selectEntries(options) {
-    options = options || {}; // (A)
-    var start = options.start || 0;
-    var end = options.end || -1;
-    var step = options.step || 1;
-    ···
-}
-to 
-function selectEntries({ start=0, end=-1, step=1 } = {}) {
-    ···
-}
-</pre>
+<h3 id="自动转化规则">自动转化规则</h3>
 <ul>
-<li>From arguments to rest parameters</li>
-<li>From apply() to the spread operator (&hellip;)</li>
-<li>From concat() to the spread operator (&hellip;)</li>
-<li>From function expressions in object literals to method definitions</li>
-</ul>
-<pre>
-var obj = {
-    foo: function () {
-        ···
-    },
-    bar: function () {
-        this.foo();
-    }, // trailing comma is legal in ES5
-}
-to
-const obj = {
-    foo() {
-        ···
-    },
-    bar() {
-        this.foo();
-    },
-}
-</pre>
-<ul>
-<li>From constructors to classes</li>
-<li>From custom error constructors to subclasses of Error</li>
-<li>From objects to Maps</li>
-<li>New string methods</li>
-<li>New Array methods</li>
-<li>From CommonJS modules to ES6 modules</li>
-</ul>
-<h1 id="语言进化">语言进化</h1>
-<ul>
-<li>module and class default is use strict 类和模块隐式为严格模式;</li>
+<li>预期是什么类型的值就调用该类型转换函数</li>
+<li>如果该位置预期即可以是字符串也可以是数值，转化为数值</li>
+<li>建议显示类型转换</li>
+<li>除了加法运算符（+）有可能把运算子转为字符串，其他运算符都会把运算子自动转成数值。</li>
+<li>一元运算符也会把运算子转成数值。+true //1</li>
 </ul></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
@@ -328,7 +325,7 @@ const obj = {
   </div>
 </div><hr /><div class="post-navs d-flex mb-3 justify-content-evenly">
   <div class="post-nav post-prev"><i class="fas fa-fw fa-chevron-left"></i>
-    <a href="/posts/nginx/">Nginx相关配置
+    <a href="/posts/lists/es2015feature/">Es2015新特性
 </a>
   </div></div></div>
 </article><section class="related-posts row card component">
@@ -337,29 +334,29 @@ const obj = {
     </div>
     <div class="card-body">
       <ul class="post-list"><li>
-          <a href="/posts/cache/">浏览器缓存过程
+          <a href="/posts/lists/es2015feature/">Es2015新特性
+</a>
+          <span class="float-end post-date">2022-07-25
+</span>
+        </li><li>
+          <a href="/posts/browser/cache/">浏览器缓存过程
 </a>
           <span class="float-end post-date">2022-07-21
 </span>
         </li><li>
-          <a href="/posts/nginx/">Nginx相关配置
+          <a href="/posts/environment/nginx/">Nginx相关配置
 </a>
           <span class="float-end post-date">2022-07-21
 </span>
         </li><li>
-          <a href="/posts/prettier/">Prettier格式化函数名后(之间出现空格
+          <a href="/posts/tools/prettier/">Prettier格式化函数名后(之间出现空格
 </a>
           <span class="float-end post-date">2022-07-21
 </span>
         </li><li>
-          <a href="/posts/computer/">配一台电脑
+          <a href="/posts/days/computer/">配一台电脑
 </a>
           <span class="float-end post-date">2022-04-28
-</span>
-        </li><li>
-          <a href="/posts/regexpfunc/">使用正则的场景
-</a>
-          <span class="float-end post-date">2021-12-26
 </span>
         </li></ul>
     </div>
@@ -394,29 +391,29 @@ const obj = {
   </div>
   <div class="card-body">
     <ul class="post-list"><li>
-        <a href="/posts/es2015feature/">Es2015新特性
+        <a href="/posts/object/type/">类型转换
 </a>
         <span class="float-end post-date">2022-07-25
 </span>
       </li><li>
-        <a href="/posts/nginx/">Nginx相关配置
+        <a href="/posts/lists/es2015feature/">Es2015新特性
+</a>
+        <span class="float-end post-date">2022-07-25
+</span>
+      </li><li>
+        <a href="/posts/environment/nginx/">Nginx相关配置
 </a>
         <span class="float-end post-date">2022-07-21
 </span>
       </li><li>
-        <a href="/posts/cache/">浏览器缓存过程
+        <a href="/posts/browser/cache/">浏览器缓存过程
 </a>
         <span class="float-end post-date">2022-07-21
 </span>
       </li><li>
-        <a href="/posts/prettier/">Prettier格式化函数名后(之间出现空格
+        <a href="/posts/tools/prettier/">Prettier格式化函数名后(之间出现空格
 </a>
         <span class="float-end post-date">2022-07-21
-</span>
-      </li><li>
-        <a href="/posts/computer/">配一台电脑
-</a>
-        <span class="float-end post-date">2022-04-28
 </span>
       </li></ul>
   </div>
@@ -427,16 +424,16 @@ const obj = {
         </h2>
       </div>
       <div class="card-body">
-        <div class="py-2"><a href="/categories/%E5%B7%A5%E5%85%B7/" class="badge rounded post-taxonomy" title="工具">
+        <div class="py-2"><a href="/categories/%E5%AF%B9%E8%B1%A1/" class="badge rounded post-taxonomy" title="对象">
+            对象
+          </a><a href="/categories/%E5%B7%A5%E5%85%B7/" class="badge rounded post-taxonomy" title="工具">
             工具
           </a><a href="/categories/%E6%B8%85%E5%8D%95/" class="badge rounded post-taxonomy" title="清单">
             清单
+          </a><a href="/categories/%E7%8E%AF%E5%A2%83/" class="badge rounded post-taxonomy" title="环境">
+            环境
           </a><a href="/categories/%E7%94%9F%E6%B4%BB/" class="badge rounded post-taxonomy" title="生活">
             生活
-          </a><a href="/categories/%E9%83%A8%E7%BD%B2/" class="badge rounded post-taxonomy" title="部署">
-            部署
-          </a><a href="/categories/%E5%AF%B9%E8%B1%A1/" class="badge rounded post-taxonomy" title="对象">
-            对象
           </a><a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="badge rounded post-taxonomy" title="浏览器">
             浏览器
           </a><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="badge rounded post-taxonomy" title="计算机基础">
@@ -462,14 +459,14 @@ const obj = {
             正则
           </a><a href="/series/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="badge rounded post-taxonomy" title="版本管理工具">
             版本管理工具
+          </a><a href="/series/%E7%B1%BB%E5%9E%8B/" class="badge rounded post-taxonomy" title="类型">
+            类型
           </a><a href="/series/%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5/" class="badge rounded post-taxonomy" title="缓存策略">
             缓存策略
           </a><a href="/series/%E7%BC%96%E7%A0%81/" class="badge rounded post-taxonomy" title="编码">
             编码
           </a><a href="/series/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/" class="badge rounded post-taxonomy" title="编码规范">
             编码规范
-          </a><a href="/series/%E8%AE%A1%E7%AE%97%E6%9C%BAdiv/" class="badge rounded post-taxonomy" title="计算机div">
-            计算机div
           </a></div>
       </div>
     </section><section class="taxonomies row card component">

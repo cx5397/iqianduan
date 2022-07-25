@@ -3,27 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>使用正则的场景 - 爱前端</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
+    <title>使用hugo搭建博客 - 爱前端</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
 <link rel="icon" href="/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
 <link rel="icon" href="/images/icons/favicon.ico">
 <link rel="manifest" href="/manifest.json">
 <meta name="keywords" content="" />
-<meta name="description" content="字符串与正则相关的使用方法" /><meta itemprop="name" content="使用正则的场景">
-<meta itemprop="description" content="字符串与正则相关的使用方法"><meta itemprop="datePublished" content="2021-12-26T11:37:51+08:00" />
-<meta itemprop="dateModified" content="2021-12-26T11:37:51+08:00" />
-<meta itemprop="wordCount" content="1492">
-<meta itemprop="keywords" content="replace,exec,test,match,search,split," /><meta property="og:title" content="使用正则的场景" />
-<meta property="og:description" content="字符串与正则相关的使用方法" />
+<meta name="description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again." /><meta itemprop="name" content="使用hugo搭建博客">
+<meta itemprop="description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."><meta itemprop="datePublished" content="2021-12-15T16:37:51+08:00" />
+<meta itemprop="dateModified" content="2021-12-15T16:37:51+08:00" />
+<meta itemprop="wordCount" content="1372">
+<meta itemprop="keywords" content="hugo,hugo-theme-bootstrap,github page," /><meta property="og:title" content="使用hugo搭建博客" />
+<meta property="og:description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/regexpfunc/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-12-26T11:37:51+08:00" />
-<meta property="article:modified_time" content="2021-12-26T11:37:51+08:00" /><meta property="og:site_name" content="爱前端" />
+<meta property="og:url" content="/posts/environment/buildwebsite/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-15T16:37:51+08:00" />
+<meta property="article:modified_time" content="2021-12-15T16:37:51+08:00" /><meta property="og:site_name" content="爱前端" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用正则的场景"/>
-<meta name="twitter:description" content="字符串与正则相关的使用方法"/>
+<meta name="twitter:title" content="使用hugo搭建博客"/>
+<meta name="twitter:description" content="Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."/>
 <meta name="robots" content="index, follow" /><link rel="stylesheet" href="/css/bundle.min.ebfc87f7f6580e36e6640d41143a700b9ec6f4ff8e30ac45c6fb67b65d4fc1c0.css" integrity="sha256-6/yH9/ZYDjbmZA1BFDpwC57G9P&#43;OMKxFxvtntl1PwcA=" crossorigin="anonymous">
 <noscript><link rel="stylesheet" href="/css/bundle.min.ebfc87f7f6580e36e6640d41143a700b9ec6f4ff8e30ac45c6fb67b65d4fc1c0.css" integrity="sha256-6/yH9/ZYDjbmZA1BFDpwC57G9P&#43;OMKxFxvtntl1PwcA=" crossorigin="anonymous"></noscript></head>
   <body><script>const items=['mode','palette'];items.forEach(function(a){const b=localStorage.getItem('hbs-'+a);b&&document.body.parentElement.setAttribute('data-'+a,b)})</script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
@@ -50,11 +50,11 @@
   </div>
   <div class="offcanvas-body">
     <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=%e4%bd%bf%e7%94%a8%e6%ad%a3%e5%88%99%e7%9a%84%e5%9c%ba%e6%99%af&url=%2fposts%2fregexpfunc%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=%e4%bd%bf%e7%94%a8hugo%e6%90%ad%e5%bb%ba%e5%8d%9a%e5%ae%a2&url=%2fposts%2fenvironment%2fbuildwebsite%2f">
       <i class="fab fa-fw fa-twitter"></i> Twitter
     </a>
     <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button"
-      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fregexpfunc%2f">
+      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fenvironment%2fbuildwebsite%2f">
       <i class="fab fa-fw fa-facebook-f"></i> Facebook
     </a>
   </div>
@@ -205,7 +205,7 @@
 <div class="col-lg-8">
   <div class="container"><nav class="row card component" aria-label="breadcrumb">
   <div class="card-body">
-    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">Posts</a></li><li class="breadcrumb-item active">使用正则的场景</li></ol>
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">Posts</a></li><li class="breadcrumb-item active">使用hugo搭建博客</li></ol>
   </div>
 </nav><article class="row card component mb-4 post"><div class="post-panel-wrapper">
   <div class="d-flex flex-column component rounded post-panel">
@@ -232,15 +232,15 @@
   </div>
 </div>
 <div class="card-header ">
-    <h1 class="card-title post-title">使用正则的场景
+    <h1 class="card-title post-title">使用hugo搭建博客
 </h1>
   </div>
   <div class="card-body"><div class="post-meta">
-  <span class="post-date" title="创建于 2021-12-26 03:37:51 &#43;0000 UTC。">
-    2021-12-26
+  <span class="post-date" title="创建于 2021-12-15 08:37:51 &#43;0000 UTC。">
+    2021-12-15
   </span><span class="post-reading-time">
     3 分钟阅读
-  </span><span class="post-taxonomies"><a href="/categories/%E5%AF%B9%E8%B1%A1/" class="badge rounded-pill post-taxonomy">对象</a><a href="/series/%E6%AD%A3%E5%88%99/" class="badge rounded-pill post-taxonomy">正则</a><a href="/tags/replace/" class="badge rounded-pill post-taxonomy">replace</a><a href="/tags/exec/" class="badge rounded-pill post-taxonomy">exec</a><a href="/tags/test/" class="badge rounded-pill post-taxonomy">test</a><a href="/tags/match/" class="badge rounded-pill post-taxonomy">match</a><a href="/tags/search/" class="badge rounded-pill post-taxonomy">search</a><a href="/tags/split/" class="badge rounded-pill post-taxonomy">split</a></span>
+  </span><span class="post-taxonomies"><a href="/categories/%E7%8E%AF%E5%A2%83/" class="badge rounded-pill post-taxonomy">环境</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="badge rounded-pill post-taxonomy">博客</a><a href="/tags/hugo/" class="badge rounded-pill post-taxonomy">hugo</a><a href="/tags/hugo-theme-bootstrap/" class="badge rounded-pill post-taxonomy">hugo-theme-bootstrap</a><a href="/tags/github-page/" class="badge rounded-pill post-taxonomy">github page</a></span>
 </div>
 <div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
   <div class="offcanvas-header">
@@ -252,242 +252,118 @@
   <div class="offcanvas-body">
     <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#regexpprototypeteststringboolean-正则表达式与指定的字符串是否匹配">RegExp.prototype.test(String):Boolean, 正则表达式与指定的字符串是否匹配</a></li>
-        <li><a href="#regexpprototypeexecstringarraynull-在一个指定字符串中执行一个搜索匹配">RegExp.prototype.exec(String):[Array|null], 在一个指定字符串中执行一个搜索匹配</a></li>
-        <li><a href="#stringprototypematchmatchall-regexparray-返回一个字符串匹配正则表达式的结果">String.prototype.match/matchAll (RegExp):Array, 返回一个字符串匹配正则表达式的结果</a></li>
-        <li><a href="#stringprototypereplacereplaceall-regexpsubstr-newsubstrfunction-替换字符串">String.prototype.replace/replaceAll (RegExp|substr, newSubStr|function), 替换字符串</a></li>
-        <li><a href="#stringprototypesearch-regexpindex-regexp-在字符串中首次匹配项的索引">String.prototype.search (RegExp):index, RegExp 在字符串中首次匹配项的索引</a></li>
-        <li><a href="#stringprototypesplit-separator-limit-array-用-separator-把字符串分割成数组">String.prototype.split ([separator[, limit]] ):Array, 用 separator 把字符串分割成数组</a></li>
-      </ul>
-    </li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#域名申请">域名申请</a></li>
+    <li><a href="#icp-备案与免费静态服务器">icp 备案与免费静态服务器</a></li>
+    <li><a href="#hugo-工程创建与编译">hugo 工程创建与编译</a></li>
+    <li><a href="#域名解析与-github-page-设置">域名解析与 github page 设置</a></li>
+    <li><a href="#我们可以用-github-actions-自动构建来优化流程这样每次-commit就会自动编译部署">我们可以用 github Actions 自动构建，来优化流程，这样每次 commit，就会自动编译，部署</a></li>
   </ul>
 </nav>
   </div>
-</div><div class="post-content mb-3"><h1 id="方法总览">方法总览</h1>
-<ul>
-<li>
-<p>RegExp.prototype.test</p>
+</div><div class="post-content mb-3"><h2 id="前言">前言</h2>
+<p>同事问我，你有什么梦想，我想了半天没有回答出来，思来想去，对于梦想，大多数都跟钱有关，话说没有钱解决不了的问题，解决不了那就是钱不够，那么我们有没有什么东西是很重要，又是钱买不到的，或者不容易买到的呢</p>
+<p>健康的身体，话说身体是革命的本钱，是所有的基础，花时间去锻炼身体，健康营养的饮食，良好愉悦的心情，是保持健康的最低条件</p>
+<p>一技之长，人生的价值在于被利用价值，人不可能做好很多事，于是根据自己能力选择合适的事就很重要，做一行爱一行，拥有难以替代的特长，是生存的保障</p>
+<p>对于未来的希望，未来很漫长，需要有期待，有诗，有远方</p>
+<p>能够陪伴你的好友，人是群体动物，社会关系构筑了现代文明体系，每个人都很忙，在快节奏的城市，能够有交集那也是难得的缘分</p>
+<p>2022 决定好好写博客，促使自己学习，变的更好(这也是建站目的)</p>
+<h2 id="域名申请">域名申请</h2>
+<p>域名我使用的阿里云的<a href="https://wanwang.aliyun.com/domain/" target="_blank" rel="noopener noreferrer">万网</a>
+购买的 10 年期限，199 人民币，也可以不买域名，买域名只是让网站地址更加好记忆，看起来高大上一点，免费静态托管网站提供的地址太长不友好</p>
+<p>域名买下来后需要在购买商那里完成实名信息登记</p>
+<h2 id="icp-备案与免费静态服务器">icp 备案与免费静态服务器</h2>
+<p>根据国家规定，国内的网站都需要备案，备案就是企业或个人提交建站相关信息到对应服务商，用于国家监管，服务器在国外就不需要备案</p>
+<p>找到的免费的静态托管网站有 gitee 和 github，gitee 在国内需要备案，不提供个性化域名服务(收费版本可以)，但是访问速度会快于 github，为了使用个性化域名，所以我选择了 github</p>
+<h2 id="hugo-工程创建与编译">hugo 工程创建与编译</h2>
+<ol>
+<li>下载 <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreferrer">hugo 软件</a>
+生成网站</li>
+<li>将解压的可执行文件路径 bin 目录加入环境变量 path</li>
+<li>新开 cmd 命令窗口，创建工程</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="ln">1</span>hugo new site myblog
+<span class="ln">2</span>cd myblog
+<span class="ln">3</span>新建目录themes
+</code></pre></div><ol start="4">
+<li>将<a href="https://github.com/cx5397/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">hugo-theme-bootstrap</a>
+下载下来放在 themes 目录下</li>
+<li>在 myblog 工程根目录下执行下列命令</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="ln">1</span>cp -a themes/hugo-theme-bootstrap/exampleSite/* .
+<span class="ln">2</span>//如果你使用的是 Windows，请改用 xcopy .\themes\hugo-theme-bootstrap\exampleSite /E
+</code></pre></div><ol start="6">
+<li>运行工程 <code>hugo server --watch</code></li>
+<li>编译文件到 docs 目录下 <code>hugo -d docs</code></li>
+<li>将整个工程提交到 github 仓库中</li>
+</ol>
+<h2 id="域名解析与-github-page-设置">域名解析与 github page 设置</h2>
+<ol>
+<li>在域名服务商将域名 CNAME 到 github 服务器，格式为 github 用户名.github.io（@记录为不带 www 的域名解析）
+<img class="img-fluid" alt="域名解析" src="/posts/environment/buildwebsite/images/aliyun.png" loading="lazy"
+   width="1002" height="540"
+   />
+
 </li>
-<li>
-<p>RegExp.prototype.exec[× 需要 while 遍历,尽量少用,用 match/matchAll 代替 ]</p>
+<li>点开刚刚提交到的 github 仓库，进入 settings 目录</li>
+<li>找到 GitHub Pages,点击 Check it out here</li>
+<li>填写代码所在分支，选择/docs 目录，点保存，Custom domain 填写自己刚刚解析的域名地址，点保存
+<img class="img-fluid" alt="github page配置" src="/posts/environment/buildwebsite/images/page.png" loading="lazy"
+   width="1141" height="559"
+   />
+
 </li>
-<li>
-<p>String.prototype.match</p>
-</li>
-<li>
-<p>String.prototype.matchAll</p>
-</li>
-<li>
-<p>String.prototype.replace</p>
-</li>
-<li>
-<p>String.prototype.replaceAll</p>
-</li>
-<li>
-<p>String.prototype.split</p>
-</li>
-<li>
-<p>String.prototype.search</p>
-</li>
-</ul>
-<h1 id="方法详情">方法详情</h1>
-<h3 id="regexpprototypeteststringboolean-正则表达式与指定的字符串是否匹配">RegExp.prototype.test(String):Boolean, 正则表达式与指定的字符串是否匹配</h3>
-<ul>
-<li>匹配就返回 true，不匹配就返回 false</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>let str = &#39;hello world!&#39;;
-<span class="ln">2</span>let result = /^hello/.test(str);
-<span class="ln">3</span>console.log(result);
-<span class="ln">4</span>// true
-</code></pre></div><ul>
-<li>如果正则表达式设置了全局标志 连续的执行<code>test()</code>方法，后续的执行将会从 lastIndex 处开始匹配字符串</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>var regex = /foo/g;
-<span class="ln">2</span>
-<span class="ln">3</span>// regex.lastIndex is at 0
-<span class="ln">4</span>regex.test(&#39;foo&#39;); // true
-<span class="ln">5</span>
-<span class="ln">6</span>// regex.lastIndex is now at 3
-<span class="ln">7</span>regex.test(&#39;foo&#39;); // false
-</code></pre></div><h3 id="regexpprototypeexecstringarraynull-在一个指定字符串中执行一个搜索匹配">RegExp.prototype.exec(String):[Array|null], 在一个指定字符串中执行一个搜索匹配</h3>
-<ul>
-<li>如果匹配成功返回一个数组， 并更新正则表达式对象的  <code>lastIndex</code>属性。完全匹配成功的文本将作为返回数组的第一项，从第二项起，后续每项都对应正则表达式内捕获括号里匹配成功的文本。</li>
-<li>如果匹配失败，<code>exec()</code>  方法返回  <code>null</code>，并将  <code>lastIndex</code>  重置为 0 。</li>
-<li>如果模式修正符带有 g，需要 while 遍历，多次执行才能得到所有匹配</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>var myRe = /ab*/g;
-<span class="ln"> 2</span>var str = &#39;abbcdefabh&#39;;
-<span class="ln"> 3</span>var myArray;
-<span class="ln"> 4</span>while ((myArray = myRe.exec(str)) !== null) {
-<span class="ln"> 5</span>  var msg = &#39;Found &#39; + myArray[0] + &#39;. &#39;;
-<span class="ln"> 6</span>  msg += &#39;Next match starts at &#39; + myRe.lastIndex;
-<span class="ln"> 7</span>  console.log(msg);
-<span class="ln"> 8</span>}
-<span class="ln"> 9</span>//output
-<span class="ln">10</span>//Found abb. Next match starts at 3
-<span class="ln">11</span>//Found ab. Next match starts at 9
-<span class="ln">12</span>//返回myArray结构如
-<span class="ln">13</span>[
-<span class="ln">14</span>    0: &#34;abb&#34; ---第n次万全匹配
-<span class="ln">15</span>    1: &#34;a&#34;   ---第n次括号匹配
-<span class="ln">16</span>    groups: undefined
-<span class="ln">17</span>    index: 0
-<span class="ln">18</span>    input: &#34;abbcdefabh&#34;
-<span class="ln">19</span>    length: 1
-<span class="ln">20</span>]
-</code></pre></div><h3 id="stringprototypematchmatchall-regexparray-返回一个字符串匹配正则表达式的结果">String.prototype.match/matchAll (RegExp):Array, 返回一个字符串匹配正则表达式的结果</h3>
-<ul>
-<li>如果传入一个非正则表达式对象参数，则会隐式地使用  <code>new RegExp(obj)</code>  将其转换为一个  <code>RegExp</code></li>
-<li>模式修正符 g 的区别
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>带 g</th>
-<th>不带 g</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>match</td>
-<td>1.完整匹配的所有结果，无捕获组</td>
-<td>2.第一个完整匹配及其相关的捕获组</td>
-</tr>
-<tr>
-<td>matchAll</td>
-<td>3.所有完整匹配的结果及分组捕获组的迭代器</td>
-<td>×</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>//---1.match带g（×要匹配全部，建议使用matchAll）---
-<span class="ln"> 2</span>var regexp = /t(e)(st(\d?))/g;
-<span class="ln"> 3</span>var str = &#39;test1test2&#39;;
+</ol>
+<h2 id="我们可以用-github-actions-自动构建来优化流程这样每次-commit就会自动编译部署">我们可以用 github Actions 自动构建，来优化流程，这样每次 commit，就会自动编译，部署</h2>
+<ol>
+<li>配置 settings pages 项,部署分支改为 gh-pages,目录选择/root,工作流编译的代码会放在这里</li>
+<li>配置 Actions 项，点击最上面的<code>set up a workflow yourself</code>， 将下面的工作流代码复制进.github/workflows/你的分支名.yml，然后 start commit</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="ln"> 1</span># This is a basic workflow to help you get started with Actions
+<span class="ln"> 2</span>name: CI
+<span class="ln"> 3</span># Controls when the workflow will run
 <span class="ln"> 4</span>
-<span class="ln"> 5</span>str.match(regexp);
-<span class="ln"> 6</span>// Array [&#39;test1&#39;, &#39;test2&#39;]
-<span class="ln"> 7</span>
-<span class="ln"> 8</span>//---2.match不带g---
-<span class="ln"> 9</span>var regexp = /t(e)(st(\d?))/g;
-<span class="ln">10</span>var str = &#39;test1test2&#39;;
-<span class="ln">11</span>
-<span class="ln">12</span>str.match(regexp);
-<span class="ln">13</span>//Array [&#39;test1&#39;, &#39;e&#39;, &#39;st1&#39;, &#39;1&#39;, index: 0, input: &#39;test1test2&#39;, groups: undefined]
-<span class="ln">14</span>
-<span class="ln">15</span>//---3.matchAll 必须带g(可以替代exec方法)---
-<span class="ln">16</span>var regexp = /t(e)(st(\d?))/g;
-<span class="ln">17</span>var str = &#39;test1test2&#39;;
-<span class="ln">18</span>let array = [...str.matchAll(regexp)];
-<span class="ln">19</span>
-<span class="ln">20</span>//返回二维数组
-<span class="ln">21</span>array[0];
-<span class="ln">22</span>// [&#39;test1&#39;, &#39;e&#39;, &#39;st1&#39;, &#39;1&#39;, index: 0, input: &#39;test1test2&#39;, length: 4]
-<span class="ln">23</span>array[1];
-<span class="ln">24</span>// [&#39;test2&#39;, &#39;e&#39;, &#39;st2&#39;, &#39;2&#39;, index: 5, input: &#39;test1test2&#39;, length: 4]
-</code></pre></div><h3 id="stringprototypereplacereplaceall-regexpsubstr-newsubstrfunction-替换字符串">String.prototype.replace/replaceAll (RegExp|substr, newSubStr|function), 替换字符串</h3>
-<ul>
-<li>
-<p>该方法并不改变调用它的字符串本身，而只是返回一个新的替换后的字符串</p>
-</li>
-<li>
-<p>第一个参数的区别</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>字符串</th>
-<th>正则带 g</th>
-<th>正则不带 g</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>replace</td>
-<td>替换第一个匹配到的</td>
-<td>替换所有匹配到的(× 建议语义化 replaceAll 替代)</td>
-<td>2.替换第一个匹配到的</td>
-</tr>
-<tr>
-<td>replaceAll</td>
-<td>替换所有匹配的</td>
-<td>3.替换所有匹配到的</td>
-<td>×</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>//---2 replace 正则不带g---
-<span class="ln"> 2</span>var re = /h/;
-<span class="ln"> 3</span>var str = &#34;John Smith&#34;;
-<span class="ln"> 4</span>var newstr = str.replace(re, &#34;?&#34;);
-<span class="ln"> 5</span>// Jo?n Smith
-<span class="ln"> 6</span>console.log(newstr);
-<span class="ln"> 7</span>
-<span class="ln"> 8</span>//---3 replaceAll---
-<span class="ln"> 9</span>var re = /h/g;
-<span class="ln">10</span>var str = &#34;John Smith&#34;;
-<span class="ln">11</span>var newstr = str.replaceAll(re, &#34;?&#34;);
-<span class="ln">12</span>// Jo?n Smit?
-<span class="ln">13</span>console.log(newstr);
-</code></pre></div><ul>
-<li>第 2 个参数为 newSubStr 时,用<code>$1-99</code>表示第 n 个括号匹配的字符串,如果不存在第 n 个分组，那么将会把匹配到到内容替换为字面量。比如不存在第 3 个分组，就会用“$3”替换匹配到的内容;“$&amp;” 插入匹配的子串;“$`”插入当前匹配的子串左边的内容;“$'” 插入当前匹配的子串右边的内容</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>//交换一个字符串中两个单词的位置
-<span class="ln">2</span>var re = /(\w+)\s(\w+)/;
-<span class="ln">3</span>var str = &#34;John Smith&#34;;
-<span class="ln">4</span>var newstr = str.replace(re, &#34;$2, $1&#34;);
-<span class="ln">5</span>// Smith, John
-<span class="ln">6</span>console.log(newstr);
-</code></pre></div><ul>
-<li>第 2 个参数为函数时,函数参数为 function(match,p1,p2,&hellip;pn,offset,string),match 匹配到的字符串;p1,p2&hellip;pn 相当于$1-$99 括号匹配;offset 匹配到的子字符串在原字符串中的偏移量;string 被匹配的原字符串</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>function replacer(match, p1, p2, p3, offset, string) {
-<span class="ln">2</span>  // p1 is nondigits, p2 digits, and p3 non-alphanumerics
-<span class="ln">3</span>  //match= abc12345#$*%
-<span class="ln">4</span>  return [p1, p2, p3].join(&#39; - &#39;);
-<span class="ln">5</span>}
-<span class="ln">6</span>var newString = &#39;abc12345#$*%&#39;.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
-<span class="ln">7</span>console.log(newString);  // abc - 12345 - #$*%
-</code></pre></div><h3 id="stringprototypesearch-regexpindex-regexp-在字符串中首次匹配项的索引">String.prototype.search (RegExp):index, RegExp 在字符串中首次匹配项的索引</h3>
-<ul>
-<li>返回首次匹配项的索引，未匹配则返回  <code>-1</code></li>
-<li>类似于正则表达式的<code>test():Boolean</code>方法,<code>'ssass'.indexOf('a')</code>方法; 当要了解更多匹配信息时，可使用  <code>match()</code>方法</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>var str = &#34;hey JudE&#34;;
-<span class="ln">2</span>var re = /[A-Z]/g;
-<span class="ln">3</span>var re2 = /[.]/g;
-<span class="ln">4</span>console.log(str.search(re)); // returns 4, which is the index of the first capital letter &#34;J&#34;
-<span class="ln">5</span>console.log(str.search(re2)); // returns -1 cannot find &#39;.&#39; dot punctuation
-</code></pre></div><h3 id="stringprototypesplit-separator-limit-array-用-separator-把字符串分割成数组">String.prototype.split ([separator[, limit]] ):Array, 用 separator 把字符串分割成数组</h3>
-<ul>
-<li><code>separator</code>  可以是一个字符串或正则表达式</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>var myString = &#34;Hello 1 word. Sentence number 2.&#34;;
-<span class="ln">2</span>var splits = myString.split(/(\d)/);
-<span class="ln">3</span>//[ &#34;Hello &#34;, &#34;1&#34;, &#34; word. Sentence number &#34;, &#34;2&#34;, &#34;.&#34; ]
-<span class="ln">4</span>console.log(splits);
-</code></pre></div><ul>
-<li><code>separator</code>如果是数组会转化为字符串</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>const myString = &#39;ca,bc,a,bca,bca,bc&#39;;
-<span class="ln">2</span>
-<span class="ln">3</span>const splits = myString.split([&#39;a&#39;,&#39;b&#39;]);
-<span class="ln">4</span>// myString.split([&#39;a&#39;,&#39;b&#39;]) is same as myString.split(String([&#39;a&#39;,&#39;b&#39;]))
-<span class="ln">5</span>
-<span class="ln">6</span>console.log(splits);  //[&#34;c&#34;, &#34;c,&#34;, &#34;c&#34;, &#34;c&#34;, &#34;c&#34;]
-</code></pre></div><ul>
-<li>limit 为一个整数，限定返回的分割片段数量</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>var myString = &#34;Hello World. How are you doing?&#34;;
-<span class="ln">2</span>var splits = myString.split(&#34; &#34;, 3);
-<span class="ln">3</span>//[&#39;Hello&#39;, &#39;World.&#39;, &#39;How&#39;]
-<span class="ln">4</span>console.log(splits);
-</code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+<span class="ln"> 5</span>on:
+<span class="ln"> 6</span># Triggers the workflow on push or pull request events but only for the main branch
+<span class="ln"> 7</span>push:
+<span class="ln"> 8</span>branches: [main]
+<span class="ln"> 9</span>pull_request:
+<span class="ln">10</span>branches: [main]
+<span class="ln">11</span># Allows you to run this workflow manually from the Actions tab
+<span class="ln">12</span>workflow_dispatch:
+<span class="ln">13</span># A workflow run is made up of one or more jobs that can run sequentially or in parallel
+<span class="ln">14</span>jobs:
+<span class="ln">15</span># This workflow contains a single job called &#34;build&#34;
+<span class="ln">16</span>build: # The type of runner that the job will run on
+<span class="ln">17</span>runs-on: ubuntu-latest
+<span class="ln">18</span>    # Steps represent a sequence of tasks that will be executed as part of the job
+<span class="ln">19</span>    steps:
+<span class="ln">20</span>      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+<span class="ln">21</span>      - uses: actions/checkout@v2
+<span class="ln">22</span>
+<span class="ln">23</span>      # Runs a single command using the runners shell
+<span class="ln">24</span>      - name: Run a one-line script
+<span class="ln">25</span>        run: echo Hello, world!
+<span class="ln">26</span>
+<span class="ln">27</span>      - name: Setup Hugo
+<span class="ln">28</span>        uses: peaceiris/actions-hugo@v2
+<span class="ln">29</span>        with:
+<span class="ln">30</span>          hugo-version: &#34;0.90.1&#34;
+<span class="ln">31</span>          # extended: true
+<span class="ln">32</span>
+<span class="ln">33</span>      - name: Build
+<span class="ln">34</span>        run: hugo -d docs
+<span class="ln">35</span>
+<span class="ln">36</span>      # 将main分支打包后的docs文件夹内容放到gh-pages分支上
+<span class="ln">37</span>      - name: Deploy
+<span class="ln">38</span>        uses: peaceiris/actions-gh-pages@v3
+<span class="ln">39</span>        if: ${{ github.ref == &#39;refs/heads/main&#39; }}
+<span class="ln">40</span>        with:
+<span class="ln">41</span>          github_token: ${{ secrets.GITHUB_TOKEN }}
+<span class="ln">42</span>          publish_dir: ./docs
+</code></pre></div><ol start="3">
+<li>提交代码后，再次进入 Actions,你就可以看到 workflows 运行情况，点击具体的任务，可以重新跑这个任务，查看 workflow 具体的执行步骤</li>
+</ol></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
@@ -514,10 +390,10 @@
   </div>
 </div><hr /><div class="post-navs d-flex mb-3 justify-content-evenly">
   <div class="post-nav post-prev"><i class="fas fa-fw fa-chevron-left"></i>
-    <a href="/posts/guide/">前端学习路线图
+    <a href="/posts/tools/git/">Git相关使用
 </a>
   </div><div class="post-nav post-next">
-    <a href="/posts/computer/">配一台电脑
+    <a href="/posts/computer/ascii2base64/">Ascii转base64
 </a>
     <i class="fas fa-fw fa-chevron-right"></i>
   </div></div></div>
@@ -527,29 +403,29 @@
     </div>
     <div class="card-body">
       <ul class="post-list"><li>
-          <a href="/posts/guide/">前端学习路线图
-</a>
-          <span class="float-end post-date">2021-12-20
-</span>
-        </li><li>
-          <a href="/posts/sport20211219/">羊台山大环徒步
-</a>
-          <span class="float-end post-date">2021-12-19
-</span>
-        </li><li>
-          <a href="/posts/ascii2base64/">Ascii转base64
-</a>
-          <span class="float-end post-date">2021-12-16
-</span>
-        </li><li>
-          <a href="/posts/buildwebsite/">使用hugo搭建博客
+          <a href="/posts/tools/git/">Git相关使用
 </a>
           <span class="float-end post-date">2021-12-15
 </span>
         </li><li>
-          <a href="/posts/git/">Git相关使用
+          <a href="/about/">关于
 </a>
-          <span class="float-end post-date">2021-12-15
+          <span class="float-end post-date">2019-02-28
+</span>
+        </li><li>
+          <a href="/faq/">Frequently Asked Questions
+</a>
+          <span class="float-end post-date">0001-01-01
+</span>
+        </li><li>
+          <a href="/offline/">Offline
+</a>
+          <span class="float-end post-date">0001-01-01
+</span>
+        </li><li>
+          <a href="/contact/">联系我们
+</a>
+          <span class="float-end post-date">0001-01-01
 </span>
         </li></ul>
     </div>
@@ -584,29 +460,29 @@
   </div>
   <div class="card-body">
     <ul class="post-list"><li>
-        <a href="/posts/es2015feature/">Es2015新特性
+        <a href="/posts/object/type/">类型转换
 </a>
         <span class="float-end post-date">2022-07-25
 </span>
       </li><li>
-        <a href="/posts/nginx/">Nginx相关配置
+        <a href="/posts/lists/es2015feature/">Es2015新特性
+</a>
+        <span class="float-end post-date">2022-07-25
+</span>
+      </li><li>
+        <a href="/posts/environment/nginx/">Nginx相关配置
 </a>
         <span class="float-end post-date">2022-07-21
 </span>
       </li><li>
-        <a href="/posts/cache/">浏览器缓存过程
+        <a href="/posts/browser/cache/">浏览器缓存过程
 </a>
         <span class="float-end post-date">2022-07-21
 </span>
       </li><li>
-        <a href="/posts/prettier/">Prettier格式化函数名后(之间出现空格
+        <a href="/posts/tools/prettier/">Prettier格式化函数名后(之间出现空格
 </a>
         <span class="float-end post-date">2022-07-21
-</span>
-      </li><li>
-        <a href="/posts/computer/">配一台电脑
-</a>
-        <span class="float-end post-date">2022-04-28
 </span>
       </li></ul>
   </div>
@@ -617,16 +493,16 @@
         </h2>
       </div>
       <div class="card-body">
-        <div class="py-2"><a href="/categories/%E5%B7%A5%E5%85%B7/" class="badge rounded post-taxonomy" title="工具">
+        <div class="py-2"><a href="/categories/%E5%AF%B9%E8%B1%A1/" class="badge rounded post-taxonomy" title="对象">
+            对象
+          </a><a href="/categories/%E5%B7%A5%E5%85%B7/" class="badge rounded post-taxonomy" title="工具">
             工具
           </a><a href="/categories/%E6%B8%85%E5%8D%95/" class="badge rounded post-taxonomy" title="清单">
             清单
+          </a><a href="/categories/%E7%8E%AF%E5%A2%83/" class="badge rounded post-taxonomy" title="环境">
+            环境
           </a><a href="/categories/%E7%94%9F%E6%B4%BB/" class="badge rounded post-taxonomy" title="生活">
             生活
-          </a><a href="/categories/%E9%83%A8%E7%BD%B2/" class="badge rounded post-taxonomy" title="部署">
-            部署
-          </a><a href="/categories/%E5%AF%B9%E8%B1%A1/" class="badge rounded post-taxonomy" title="对象">
-            对象
           </a><a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="badge rounded post-taxonomy" title="浏览器">
             浏览器
           </a><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="badge rounded post-taxonomy" title="计算机基础">
@@ -652,14 +528,14 @@
             正则
           </a><a href="/series/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="badge rounded post-taxonomy" title="版本管理工具">
             版本管理工具
+          </a><a href="/series/%E7%B1%BB%E5%9E%8B/" class="badge rounded post-taxonomy" title="类型">
+            类型
           </a><a href="/series/%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5/" class="badge rounded post-taxonomy" title="缓存策略">
             缓存策略
           </a><a href="/series/%E7%BC%96%E7%A0%81/" class="badge rounded post-taxonomy" title="编码">
             编码
           </a><a href="/series/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/" class="badge rounded post-taxonomy" title="编码规范">
             编码规范
-          </a><a href="/series/%E8%AE%A1%E7%AE%97%E6%9C%BAdiv/" class="badge rounded post-taxonomy" title="计算机div">
-            计算机div
           </a></div>
       </div>
     </section><section class="taxonomies row card component">
