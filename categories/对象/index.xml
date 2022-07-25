@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>对象 on 爱前端</title>
+    <link>/categories/%E5%AF%B9%E8%B1%A1/</link>
+    <description>Recent content in 对象 on 爱前端</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 26 Dec 2021 11:37:51 +0800</lastBuildDate><atom:link href="/categories/%E5%AF%B9%E8%B1%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用正则的场景</title>
+      <link>/posts/regexpfunc/</link>
+      <pubDate>Sun, 26 Dec 2021 11:37:51 +0800</pubDate>
+      
+      <guid>/posts/regexpfunc/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

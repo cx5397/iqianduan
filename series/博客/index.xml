@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客 on 爱前端</title>
+    <link>/series/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on 爱前端</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
+    <lastBuildDate>Wed, 15 Dec 2021 16:37:51 +0800</lastBuildDate><atom:link href="/series/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用hugo搭建博客</title>
+      <link>/posts/buildwebsite/</link>
+      <pubDate>Wed, 15 Dec 2021 16:37:51 +0800</pubDate>
+      
+      <guid>/posts/buildwebsite/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

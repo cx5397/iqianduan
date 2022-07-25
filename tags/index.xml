@@ -9,11 +9,38 @@
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
     <lastBuildDate>Thu, 21 Jul 2022 14:10:51 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>cache</title>
-      <link>/tags/cache/</link>
+      <title>cache-control</title>
+      <link>/tags/cache-control/</link>
       <pubDate>Thu, 21 Jul 2022 14:10:51 +0800</pubDate>
       
-      <guid>/tags/cache/</guid>
+      <guid>/tags/cache-control/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>etag</title>
+      <link>/tags/etag/</link>
+      <pubDate>Thu, 21 Jul 2022 14:10:51 +0800</pubDate>
+      
+      <guid>/tags/etag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>expires</title>
+      <link>/tags/expires/</link>
+      <pubDate>Thu, 21 Jul 2022 14:10:51 +0800</pubDate>
+      
+      <guid>/tags/expires/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>last-modified</title>
+      <link>/tags/last-modified/</link>
+      <pubDate>Thu, 21 Jul 2022 14:10:51 +0800</pubDate>
+      
+      <guid>/tags/last-modified/</guid>
       <description></description>
     </item>
     
@@ -36,11 +63,20 @@
     </item>
     
     <item>
-      <title>组装电脑</title>
-      <link>/tags/%E7%BB%84%E8%A3%85%E7%94%B5%E8%84%91/</link>
+      <title>12400</title>
+      <link>/tags/12400/</link>
       <pubDate>Thu, 28 Apr 2022 16:10:51 +0800</pubDate>
       
-      <guid>/tags/%E7%BB%84%E8%A3%85%E7%94%B5%E8%84%91/</guid>
+      <guid>/tags/12400/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>b660</title>
+      <link>/tags/b660/</link>
+      <pubDate>Thu, 28 Apr 2022 16:10:51 +0800</pubDate>
+      
+      <guid>/tags/b660/</guid>
       <description></description>
     </item>
     

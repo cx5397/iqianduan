@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>编码 on 爱前端</title>
+    <title>编码 on xiang blog</title>
     <link>/categories/%E7%BC%96%E7%A0%81/</link>
-    <description>Recent content in 编码 on 爱前端</description>
+    <description>Recent content in 编码 on xiang blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
@@ -14,7 +14,7 @@
       <pubDate>Thu, 16 Dec 2021 12:01:51 +0800</pubDate>
       
       <guid>/posts/ascii2base64/</guid>
-      <description></description>
+      <description>&lt;p&gt;ascii 转 base64 的规则&lt;/p&gt;</description>
     </item>
     
   </channel>

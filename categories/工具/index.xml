@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具 on 爱前端</title>
+    <link>/categories/%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 工具 on 爱前端</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
+    <lastBuildDate>Thu, 21 Jul 2022 12:10:51 +0800</lastBuildDate><atom:link href="/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>prettier格式化函数名后(之间出现空格</title>
+      <link>/posts/prettier/</link>
+      <pubDate>Thu, 21 Jul 2022 12:10:51 +0800</pubDate>
+      
+      <guid>/posts/prettier/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git相关使用</title>
+      <link>/posts/git/</link>
+      <pubDate>Wed, 15 Dec 2021 11:37:51 +0800</pubDate>
+      
+      <guid>/posts/git/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

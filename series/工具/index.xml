@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>工具 on 爱前端</title>
+    <title>工具 on xiang blog</title>
     <link>/series/%E5%B7%A5%E5%85%B7/</link>
-    <description>Recent content in 工具 on 爱前端</description>
+    <description>Recent content in 工具 on xiang blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
@@ -14,7 +14,7 @@
       <pubDate>Wed, 15 Dec 2021 16:37:51 +0800</pubDate>
       
       <guid>/posts/buildwebsite/</guid>
-      <description></description>
+      <description>&lt;p&gt;The world’s fastest framework for building websites&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Wed, 15 Dec 2021 11:37:51 +0800</pubDate>
       
       <guid>/posts/git/</guid>
-      <description></description>
+      <description>&lt;p&gt;常用 git 命令，和相关产品的配置&lt;/p&gt;</description>
     </item>
     
   </channel>
