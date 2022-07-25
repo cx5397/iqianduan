@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/tags/es2015/</loc>
+    <lastmod>2022-07-25T09:10:51+08:00</lastmod>
+  </url><url>
+    <loc>/posts/es2015feature/</loc>
+    <lastmod>2022-07-25T09:10:51+08:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2022-07-25T09:10:51+08:00</lastmod>
+  </url><url>
+    <loc>/series/</loc>
+    <lastmod>2022-07-25T09:10:51+08:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2022-07-25T09:10:51+08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-07-25T09:10:51+08:00</lastmod>
+  </url><url>
+    <loc>/categories/%E6%B8%85%E5%8D%95/</loc>
+    <lastmod>2022-07-25T09:10:51+08:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2022-07-25T09:10:51+08:00</lastmod>
+  </url><url>
+    <loc>/series/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
+    <lastmod>2022-07-25T09:10:51+08:00</lastmod>
+  </url><url>
     <loc>/tags/cache-control/</loc>
     <lastmod>2022-07-21T14:10:51+08:00</lastmod>
   </url><url>
@@ -20,25 +47,10 @@
     <loc>/posts/nginx/</loc>
     <lastmod>2022-07-21T14:10:51+08:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2022-07-21T14:10:51+08:00</lastmod>
-  </url><url>
-    <loc>/series/</loc>
-    <lastmod>2022-07-21T14:10:51+08:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2022-07-21T14:10:51+08:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2022-07-21T14:10:51+08:00</lastmod>
-  </url><url>
     <loc>/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
     <lastmod>2022-07-21T14:10:51+08:00</lastmod>
   </url><url>
     <loc>/posts/cache/</loc>
-    <lastmod>2022-07-21T14:10:51+08:00</lastmod>
-  </url><url>
-    <loc>/</loc>
     <lastmod>2022-07-21T14:10:51+08:00</lastmod>
   </url><url>
     <loc>/series/%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5/</loc>
@@ -111,9 +123,6 @@
     <lastmod>2021-12-20T20:10:51+08:00</lastmod>
   </url><url>
     <loc>/tags/%E6%8A%80%E8%83%BD%E7%82%B9/</loc>
-    <lastmod>2021-12-20T20:10:51+08:00</lastmod>
-  </url><url>
-    <loc>/categories/%E6%B8%85%E5%8D%95/</loc>
     <lastmod>2021-12-20T20:10:51+08:00</lastmod>
   </url><url>
     <loc>/series/%E6%88%B7%E5%A4%96/</loc>

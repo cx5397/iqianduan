@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 21 Jul 2022 14:10:51 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jul 2022 09:10:51 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>清单</title>
+      <link>/categories/%E6%B8%85%E5%8D%95/</link>
+      <pubDate>Mon, 25 Jul 2022 09:10:51 +0800</pubDate>
+      
+      <guid>/categories/%E6%B8%85%E5%8D%95/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>浏览器</title>
       <link>/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
@@ -50,15 +59,6 @@
       <pubDate>Sun, 26 Dec 2021 11:37:51 +0800</pubDate>
       
       <guid>/categories/%E5%AF%B9%E8%B1%A1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>清单</title>
-      <link>/categories/%E6%B8%85%E5%8D%95/</link>
-      <pubDate>Mon, 20 Dec 2021 20:10:51 +0800</pubDate>
-      
-      <guid>/categories/%E6%B8%85%E5%8D%95/</guid>
       <description></description>
     </item>
     
