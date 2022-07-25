@@ -21,7 +21,7 @@ images = []
 
 <!--more-->
 
-### 日期格式化  输出
+### 日期格式化输出
 
 ```
 Date.prototype.format= function(fmt){
@@ -47,7 +47,7 @@ Date.prototype.format= function(fmt){
 }
 ```
 
-### 日期  对象初始化
+### 日期对象初始化
 
 - `new Date(year,month,day[,hour[,minutes[,seconds[,ms]]]])`
 - `new Date(datestr)`
@@ -64,7 +64,7 @@ Date.prototype.format= function(fmt){
 - `toLocaleString //"2017/12/22 下午4:12:32"`
 - `toLocaleTimeString //"下午4:12:32"`
 
-### 静态方法(都是返回  时间戳) 
+### 静态方法(都是返回时间戳)
 
 - `Date.now()`
 - `Date.parse(datestr)`
