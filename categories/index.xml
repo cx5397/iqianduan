@@ -7,13 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 25 Jul 2022 10:10:51 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jul 2022 10:40:51 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>对象</title>
       <link>/categories/%E5%AF%B9%E8%B1%A1/</link>
-      <pubDate>Mon, 25 Jul 2022 10:10:51 +0800</pubDate>
+      <pubDate>Mon, 25 Jul 2022 10:40:51 +0800</pubDate>
       
       <guid>/categories/%E5%AF%B9%E8%B1%A1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
+      <link>/categories/vue/</link>
+      <pubDate>Mon, 25 Jul 2022 10:37:51 +0800</pubDate>
+      
+      <guid>/categories/vue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工具</title>
+      <link>/categories/%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Mon, 25 Jul 2022 10:37:51 +0800</pubDate>
+      
+      <guid>/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>浏览器</title>
+      <link>/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
+      <pubDate>Mon, 25 Jul 2022 10:37:51 +0800</pubDate>
+      
+      <guid>/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>计算机基础</title>
+      <link>/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 25 Jul 2022 10:20:51 +0800</pubDate>
+      
+      <guid>/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</guid>
       <description></description>
     </item>
     
@@ -27,15 +63,6 @@
     </item>
     
     <item>
-      <title>浏览器</title>
-      <link>/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
-      <pubDate>Thu, 21 Jul 2022 14:10:51 +0800</pubDate>
-      
-      <guid>/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>环境</title>
       <link>/categories/%E7%8E%AF%E5%A2%83/</link>
       <pubDate>Thu, 21 Jul 2022 14:10:51 +0800</pubDate>
@@ -45,29 +72,11 @@
     </item>
     
     <item>
-      <title>工具</title>
-      <link>/categories/%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Thu, 21 Jul 2022 12:10:51 +0800</pubDate>
-      
-      <guid>/categories/%E5%B7%A5%E5%85%B7/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>生活</title>
       <link>/categories/%E7%94%9F%E6%B4%BB/</link>
       <pubDate>Thu, 28 Apr 2022 16:10:51 +0800</pubDate>
       
       <guid>/categories/%E7%94%9F%E6%B4%BB/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>计算机基础</title>
-      <link>/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
-      <pubDate>Thu, 16 Dec 2021 12:01:51 +0800</pubDate>
-      
-      <guid>/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</guid>
       <description></description>
     </item>
     

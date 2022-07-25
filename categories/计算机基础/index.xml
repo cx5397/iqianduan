@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 16 Dec 2021 12:01:51 +0800</lastBuildDate><atom:link href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jul 2022 10:20:51 +0800</lastBuildDate><atom:link href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>设计模式</title>
+      <link>/posts/computer/designmode/</link>
+      <pubDate>Mon, 25 Jul 2022 10:20:51 +0800</pubDate>
+      
+      <guid>/posts/computer/designmode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>加密、解密</title>
+      <link>/posts/computer/pwd/</link>
+      <pubDate>Mon, 25 Jul 2022 10:10:51 +0800</pubDate>
+      
+      <guid>/posts/computer/pwd/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ascii转base64</title>
       <link>/posts/computer/ascii2base64/</link>

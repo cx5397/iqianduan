@@ -1,0 +1,601 @@
+<!doctype html><html lang="zh-cn"
+  >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>web api - 爱前端</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
+<link rel="icon" href="/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="/images/icons/favicon.ico">
+<link rel="manifest" href="/manifest.json">
+<meta name="keywords" content="" />
+<meta name="description" content="web api" /><meta itemprop="name" content="web api">
+<meta itemprop="description" content="web api"><meta itemprop="datePublished" content="2022-07-25T10:37:51+08:00" />
+<meta itemprop="dateModified" content="2022-07-25T10:37:51+08:00" />
+<meta itemprop="wordCount" content="756">
+<meta itemprop="keywords" content="web api," /><meta property="og:title" content="web api" />
+<meta property="og:description" content="web api" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/browser/webapi/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-25T10:37:51+08:00" />
+<meta property="article:modified_time" content="2022-07-25T10:37:51+08:00" /><meta property="og:site_name" content="爱前端" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="web api"/>
+<meta name="twitter:description" content="web api"/>
+<meta name="robots" content="index, follow" /><link rel="stylesheet" href="/css/bundle.min.ebfc87f7f6580e36e6640d41143a700b9ec6f4ff8e30ac45c6fb67b65d4fc1c0.css" integrity="sha256-6/yH9/ZYDjbmZA1BFDpwC57G9P&#43;OMKxFxvtntl1PwcA=" crossorigin="anonymous">
+<noscript><link rel="stylesheet" href="/css/bundle.min.ebfc87f7f6580e36e6640d41143a700b9ec6f4ff8e30ac45c6fb67b65d4fc1c0.css" integrity="sha256-6/yH9/ZYDjbmZA1BFDpwC57G9P&#43;OMKxFxvtntl1PwcA=" crossorigin="anonymous"></noscript></head>
+  <body><script>const items=['mode','palette'];items.forEach(function(a){const b=localStorage.getItem('hbs-'+a);b&&document.body.parentElement.setAttribute('data-'+a,b)})</script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button><a class="navbar-brand me-3" href="/"><img class="logo" alt="Logo" src="/images/logo.webp" loading="lazy"
+   width="136" height="69"
+   />
+爱前端
+    </a>
+    <button class="navbar-social-share" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSocialShare"
+  aria-controls="offcanvasSocialShare" aria-label="Toggle social share">
+  <i class="fas fa-share-alt"></i>
+</button>
+
+<div class="offcanvas offcanvas-bottom surface" tabindex="-1" id="offcanvasSocialShare" aria-labelledby="offcanvasSocialShare">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">Share</h3>
+    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button"
+      target="_blank" href="https://twitter.com/intent/tweet?title=web%20api&url=%2fposts%2fbrowser%2fwebapi%2f">
+      <i class="fab fa-fw fa-twitter"></i> Twitter
+    </a>
+    <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button"
+      target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fbrowser%2fwebapi%2f">
+      <i class="fab fa-fw fa-facebook-f"></i> Facebook
+    </a>
+  </div>
+</div>
+    <button class="navbar-settings" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings"
+  aria-controls="offcanvasSettings" aria-label="Toggle settings">
+  <i class="fas fa-ellipsis-v"></i>
+</button>
+
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasSettings" aria-labelledby="offcanvasSettings">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">设置</h3>
+    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+
+<section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-adjust"></i> 模式</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="modeSwitcher">
+      </div>
+    </div>
+  </form>
+</section>
+
+<section class="setting">
+  <form class="font-size-switcher-form row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-font"></i> 字体大小</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+    </div>
+  </form>
+</section>
+
+
+<section class="setting palettes">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-palette"></i> 配色</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <a id="btnPalette" class="btn btn-sm btn-outline-primary" role="button" aria-label="palettePicker">
+        <i class="fas fa-eye-dropper"></i>
+      </a>
+    </div>
+  </form>
+  <div class="mt-2 d-flex visually-hidden" id="palettePicker"><button type="button" id="palette-blue" aria-label="蓝色"
+        class="btn btn-sm palette" data-palette="blue">
+      </button><button type="button" id="palette-blue-gray" aria-label="蓝灰色"
+        class="btn btn-sm palette" data-palette="blue-gray">
+      </button><button type="button" id="palette-brown" aria-label="棕色"
+        class="btn btn-sm palette" data-palette="brown">
+      </button><button type="button" id="palette-cyan" aria-label="青色"
+        class="btn btn-sm palette" data-palette="cyan">
+      </button><button type="button" id="palette-green" aria-label="绿色"
+        class="btn btn-sm palette" data-palette="green">
+      </button><button type="button" id="palette-indigo" aria-label="靛青色"
+        class="btn btn-sm palette" data-palette="indigo">
+      </button><button type="button" id="palette-orange" aria-label="橙色"
+        class="btn btn-sm palette" data-palette="orange">
+      </button><button type="button" id="palette-pink" aria-label="粉色"
+        class="btn btn-sm palette" data-palette="pink">
+      </button><button type="button" id="palette-purple" aria-label="紫色"
+        class="btn btn-sm palette" data-palette="purple">
+      </button><button type="button" id="palette-red" aria-label="红色"
+        class="btn btn-sm palette" data-palette="red">
+      </button><button type="button" id="palette-teal" aria-label="蓝绿色"
+        class="btn btn-sm palette" data-palette="teal">
+      </button><button type="button" id="palette-yellow" aria-label="黄色"
+        class="btn btn-sm palette" data-palette="yellow">
+      </button></div>
+</section>
+<section class="setting actions d-flex justify-content-center mt-auto">
+  <a role="button" class="action action-reload-page">
+    <span class="action-icon"><i class="fas fa-2x fa-redo-alt"></i></span> 刷新
+  </a>
+  <a role="button" class="action action-copy-url">
+    <span class="action-icon"><i class="fas fa-2x fa-link"></i></span> 复制链接
+  </a>
+</section>
+
+</div>
+</div>
+
+    <div class="collapse navbar-collapse" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
+      <form class="search-bar my-1" action="/search">
+  <div class="input-group input-group-sm">
+    <span class="btn btn-search disabled position-absolute left-0"><i class="fas fa-fw fa-search"></i></span>
+    <input class="form-control rounded-pill" name="q" type="search" aria-label="Search">
+  </div>
+</form>
+      <ul class="navbar-nav ms-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives/">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories/">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags/">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series/">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link" id="navbarDropdownSupport" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-fw fa-chevron-circle-down"></i>支持
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownSupport"><li>
+              <a class="dropdown-item"
+                href="https://github.com/cx5397/iqianduan/issues" target="_blank" rel="noopener noreferrer">
+                Bug Report
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/faq/">
+                Frequently Asked Questions
+              </a>
+            </li><li><hr class="dropdown-divider"></li><li>
+              <a class="dropdown-item"
+                href="https://hbs.razonyang.com" target="_blank" rel="noopener noreferrer">
+                Demo(Netlify)
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://hbs-cn.razonyang.com" target="_blank" rel="noopener noreferrer">
+                Demo(China)
+              </a>
+            </li></ul>
+        </li></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-lg-8">
+  <div class="container"><nav class="row card component" aria-label="breadcrumb">
+  <div class="card-body">
+    <ol class="breadcrumb "><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">Posts</a></li><li class="breadcrumb-item active">Web Api</li></ol>
+  </div>
+</nav><article class="row card component mb-4 post"><div class="post-panel-wrapper">
+  <div class="d-flex flex-column component rounded post-panel">
+    
+    <a id="sidebarToggler" class="action d-none d-lg-block" role="button">
+  <i class="fas fa-fw fa-expand-alt" data-fa-transform="rotate-45"></i>
+</a>
+  
+    
+
+    <a class="action btn-reward" role="button" data-bs-toggle="modal" data-bs-target="#rewardModal" title="打赏">
+  <i class="fas fa-fw fa-coffee"></i>
+</a>
+    <a class="action" data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
+  data-bs-trigger="focus" tabindex="0" role="button" aria-label="Copyright" 
+  data-bs-content="&lt;a target=&#34;_blank&#34; rel=&#34;license noopener noreferrer&#34; href=&#34;https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh&#34;&gt;CC BY-NC-ND 4.0 &lt;i class=&#34;fab fa-fw fa-creative-commons&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-by&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nc&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nd&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+">
+  <i class="fas fa-fw fa-copyright"></i>
+</a>
+    <a class="action" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+  <i class="fas fa-fw fa-list-alt"></i>
+</a>
+    
+  </div>
+</div>
+<div class="card-header ">
+    <h1 class="card-title post-title">Web Api
+</h1>
+  </div>
+  <div class="card-body"><div class="post-meta">
+  <span class="post-date" title="创建于 2022-07-25 02:37:51 &#43;0000 UTC。">
+    2022-07-25
+  </span><span class="post-reading-time">
+    2 分钟阅读
+  </span><span class="post-taxonomies"><a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="badge rounded-pill post-taxonomy">浏览器</a><a href="/series/web-api/" class="badge rounded-pill post-taxonomy">web api</a><a href="/tags/web-api/" class="badge rounded-pill post-taxonomy">web api</a></span>
+</div>
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
+      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+  </div>
+  <div class="offcanvas-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#console-nodejs-与浏览器共同部分">console [nodejs 与浏览器共同部分]</a></li>
+        <li><a href="#window">window</a></li>
+        <li><a href="#ajax-请求">ajax 请求</a></li>
+        <li><a href="#document">document</a></li>
+        <li><a href="#浏览器返回效果">浏览器返回效果</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div><div class="post-content mb-3"><h3 id="console-nodejs-与浏览器共同部分">console [nodejs 与浏览器共同部分]</h3>
+<ol>
+<li>error 错误</li>
+<li>warn 警告</li>
+<li>info 提示</li>
+<li>log 日志</li>
+<li>assert 断言 false 时输出</li>
+<li>dir 目录样式输出对象的属性</li>
+<li>trace 堆栈跟踪</li>
+<li>time 执行时间分析<code>console.time(&quot;t1&quot;);console.timeEnd(&quot;t1&quot;)</code></li>
+<li>timeEnd</li>
+<li>重写 log，变颜色</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>var _log = console.log;
+<span class="ln">2</span>console.log = function() {
+<span class="ln">3</span>  _log.call(console, &#39;%c&#39; + [].slice.call(arguments).join(&#39; &#39;), &#39;color:transparent;text-shadow:0 0 2px rgba(0,0,0,.5);&#39;);
+<span class="ln">4</span>};
+</code></pre></div><h3 id="window">window</h3>
+<h4 id="常用属性">常用属性</h4>
+<ul>
+<li>window.devicePixelRatio</li>
+<li>window.document</li>
+<li>window.history</li>
+<li>window.location</li>
+<li>window.innerWidth</li>
+<li>window.innerHeight</li>
+<li>Window.localStorage</li>
+<li>window.navigator</li>
+<li>window.outerWidth</li>
+<li>window.outerHeight</li>
+<li>window.scrollX</li>
+<li>window.scrollY</li>
+<li>window.sessionStorage</li>
+<li>window.screen</li>
+<li>window.console</li>
+</ul>
+<h4 id="常用方法">常用方法</h4>
+<ul>
+<li>window.scrollTo(x,y)</li>
+<li>window.scrollBy(x-add,y-add)</li>
+<li>window.print()</li>
+<li>window.confirm()</li>
+<li>window.alert()</li>
+<li>window.prompt(title-string)</li>
+<li>window.setTimeout()/clearTimeout</li>
+<li>window.setInterval()/clearInterval</li>
+<li>window.getSelection() 获取选择的文字对象</li>
+</ul>
+<h3 id="ajax-请求">ajax 请求</h3>
+<pre>
+  var xhr = new XMLHttpRequest();//新建ajax请求，不兼容IE7以下
+  xhr.onreadystatechange = function(){//注册回调函数
+    if(xhr.readyState === 4){
+        success(xhr.responseText);
+    } 
+  }
+  xhr.open(method,url,true);
+  xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  xhr.send(JSON.stringify(data));//发送的数据需要转化成JSON格式
+</pre>
+<h3 id="document">document</h3>
+<h4 id="常用属性-1">常用属性</h4>
+<ul>
+<li>首次获取 <code>document.body, document.head, document.getElementById('id'), document.getElementsByClassName('classname'), document.getElementsByName('name'), document.getElementsByTagName('tagname'), document.querySelector('string'), document.querySelectorAll('string')</code></li>
+<li>查父元素 <code>node.parentNode</code></li>
+<li>内容  <code>ele.innerHTML ele.outerHTML ele.textContent</code></li>
+<li>查兄弟元素 <code>node.previousSibling, node.nextSibling，node.previousElementSibling, node.nextElementSibling</code></li>
+<li>查子元素 <code>node.childNodes(包含text与comment),node.children, node.firstChild, node.lastChild, (node.hasChildNodes()是否有子元素)</code></li>
+<li>其它 <code>document.charset document.cookie document.domain document.title document.images</code></li>
+<li>element 尺寸   内<code>clientWidth clientHeight </code> 外<code>offsetWidth offsetHeight offsetTop offsetLeft</code></li>
+</ul>
+<h4 id="常用方法-1">常用方法</h4>
+<ul>
+<li>属性 <code>node.getAttribute(name) node.hasAttribute(name) node.removeAttribute(name) node.setAttribute(name,value) node.innerHTML</code></li>
+<li>classList <code>cl.add(class) cl.remove(class) cl.toggle(class) cl.contains(class)</code></li>
+<li>添加删除元素 <code>node.appendChild(node2) node.removeChild(node2) node.replaceChild(被替换,node2) node.insertBefore(插入的,node2)</code></li>
+<li>复制元素 <code>cloneNode(bool)</code></li>
+<li>是否包含字元素 <code>el.contains(child)</code></li>
+<li>创建元素 <code>createElement(tag) createTextNode(text) createAttribute(attribute-name)</code></li>
+<li>document.execCommand(&lsquo;commandname&rsquo;) 如&rsquo;copy&rsquo;复制选中的文字</li>
+<li>某个元素里面插入元素 ele.insertAdjacentHTML(position, text); adjacent:临近的 position:beforebegin [afterbegin beforeend afterend]</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>&lt;!-- beforebegin --&gt;
+<span class="ln">2</span>&lt;p&gt;
+<span class="ln">3</span>  &lt;!-- afterbegin --&gt;
+<span class="ln">4</span>  foo
+<span class="ln">5</span>  &lt;!-- beforeend --&gt;
+<span class="ln">6</span>&lt;/p&gt;
+<span class="ln">7</span>&lt;!-- afterend --&gt;
+</code></pre></div><h3 id="浏览器返回效果">浏览器返回效果</h3>
+<ol>
+<li>表单中的内容会保留</li>
+<li>无论浏览器自带的返回前进按钮，还是<code>history.go(-1)、history.back()...</code>到新的页面代码都会重新执行一次</li>
+</ol></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-coffee"></i>打赏</h5>
+        <a href="#" data-bs-dismiss="modal" class="btn btn-sm btn-outline-primary" aria-label="Close"><i class="fas fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-bs-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-bs-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/alipay.png" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/wechat.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><hr /><div class="post-navs d-flex mb-3 justify-content-evenly">
+  <div class="post-nav post-prev"><i class="fas fa-fw fa-chevron-left"></i>
+    <a href="/posts/objects/array/">数组
+</a>
+  </div><div class="post-nav post-next">
+    <a href="/posts/tools/vscode/">Vscode
+</a>
+    <i class="fas fa-fw fa-chevron-right"></i>
+  </div></div></div>
+</article><section class="related-posts row card component">
+    <div class="card-header">
+      <h2 class="card-title">相关文章</h2>
+    </div>
+    <div class="card-body">
+      <ul class="post-list"><li>
+          <a href="/posts/tools/vscode/">Vscode
+</a>
+          <span class="float-end post-date">2022-07-25
+</span>
+        </li><li>
+          <a href="/posts/objects/reflectproxy/">Reflect&amp;Proxy
+</a>
+          <span class="float-end post-date">2022-07-25
+</span>
+        </li><li>
+          <a href="/posts/objects/number/">Number
+</a>
+          <span class="float-end post-date">2022-07-25
+</span>
+        </li><li>
+          <a href="/posts/objects/event/">Event
+</a>
+          <span class="float-end post-date">2022-07-25
+</span>
+        </li><li>
+          <a href="/posts/objects/mapset/">Map&amp;Set
+</a>
+          <span class="float-end post-date">2022-07-25
+</span>
+        </li></ul>
+    </div>
+  </section><div class="card component row post-comments">
+  <div class="card-header">
+    <h2 class="card-title">评论</h2>
+  </div>
+  <div class="card-body"><script src="https://utteranc.es/client.js"
+  repo="razonyang/hugo-theme-bootstrap-comments"
+  issue-term="pathname"
+  label="comment"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script></div>
+</div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container">
+    
+    <section class="card row text-center profile component">
+  <div class="card-body">
+    <div class="col-12 d-flex align-items-center justify-content-center"><img class="profile-avatar rounded-circle" alt="chen xiang" src="/images/avatar.png" loading="lazy"
+   width="531" height="515"
+   />
+</div>
+    <div class="col-12 profile-meta"><div class="profile-name">chen xiang</div><div class="profile-bio">frontend、nodejs Engineer.</div><div class="profile-company"><i class="fas fa-fw fa-building"></i>保密</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>深圳市软件大厦</div><div class="profile-about"><i class="fas fa-fw fa-user"></i><a href="/about/">关于</a></div><div class="profile-contact"><i class="fas fa-fw fa-question-circle"></i><a href="/contact/">联系我们</a></div></div>
+  </div>
+</section>
+  <section class="recent-posts row card component">
+  <div class="card-header">
+    <h2 class="card-title">最近文章</h2>
+  </div>
+  <div class="card-body">
+    <ul class="post-list"><li>
+        <a href="/posts/objects/class/">Class
+</a>
+        <span class="float-end post-date">2022-07-25
+</span>
+      </li><li>
+        <a href="/posts/objects/event/">Event
+</a>
+        <span class="float-end post-date">2022-07-25
+</span>
+      </li><li>
+        <a href="/posts/objects/mapset/">Map&amp;Set
+</a>
+        <span class="float-end post-date">2022-07-25
+</span>
+      </li><li>
+        <a href="/posts/objects/module/">Module
+</a>
+        <span class="float-end post-date">2022-07-25
+</span>
+      </li><li>
+        <a href="/posts/objects/number/">Number
+</a>
+        <span class="float-end post-date">2022-07-25
+</span>
+      </li></ul>
+  </div>
+</section><section class="taxonomies row card component">
+      <div class="card-header">
+        <h2 class="card-title">
+          <a href="/categories">分类</a>
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="py-2"><a href="/categories/%E5%AF%B9%E8%B1%A1/" class="badge rounded post-taxonomy" title="对象">
+            对象
+          </a><a href="/categories/%E5%B7%A5%E5%85%B7/" class="badge rounded post-taxonomy" title="工具">
+            工具
+          </a><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="badge rounded post-taxonomy" title="计算机基础">
+            计算机基础
+          </a><a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="badge rounded post-taxonomy" title="浏览器">
+            浏览器
+          </a><a href="/categories/%E6%B8%85%E5%8D%95/" class="badge rounded post-taxonomy" title="清单">
+            清单
+          </a><a href="/categories/%E7%8E%AF%E5%A2%83/" class="badge rounded post-taxonomy" title="环境">
+            环境
+          </a><a href="/categories/%E7%94%9F%E6%B4%BB/" class="badge rounded post-taxonomy" title="生活">
+            生活
+          </a><a href="/categories/vue/" class="badge rounded post-taxonomy" title="vue">
+            vue
+          </a></div>
+      </div>
+    </section><section class="taxonomies row card component">
+      <div class="card-header">
+        <h2 class="card-title">
+          <a href="/series">专栏</a>
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="py-2"><a href="/series/%E7%BC%96%E7%A0%81/" class="badge rounded post-taxonomy" title="编码">
+            编码
+          </a><a href="/series/array/" class="badge rounded post-taxonomy" title="Array">
+            Array
+          </a><a href="/series/class/" class="badge rounded post-taxonomy" title="Class">
+            Class
+          </a><a href="/series/event/" class="badge rounded post-taxonomy" title="Event">
+            Event
+          </a><a href="/series/mapset/" class="badge rounded post-taxonomy" title="Map&amp;Set">
+            Map&amp;Set
+          </a><a href="/series/module/" class="badge rounded post-taxonomy" title="Module">
+            Module
+          </a><a href="/series/number/" class="badge rounded post-taxonomy" title="Number">
+            Number
+          </a><a href="/series/reflectproxy/" class="badge rounded post-taxonomy" title="Reflect&amp;Proxy">
+            Reflect&amp;Proxy
+          </a><a href="/series/slot/" class="badge rounded post-taxonomy" title="slot">
+            slot
+          </a><a href="/series/vscode/" class="badge rounded post-taxonomy" title="vscode">
+            vscode
+          </a></div>
+      </div>
+    </section><section class="taxonomies row card component">
+      <div class="card-header">
+        <h2 class="card-title">
+          <a href="/tags">标签</a>
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="py-2"><a href="/tags/12400/" class="badge rounded post-taxonomy" title="12400">
+            12400
+          </a><a href="/tags/array/" class="badge rounded post-taxonomy" title="Array">
+            Array
+          </a><a href="/tags/ascii/" class="badge rounded post-taxonomy" title="ascii">
+            ascii
+          </a><a href="/tags/b660/" class="badge rounded post-taxonomy" title="b660">
+            b660
+          </a><a href="/tags/base64/" class="badge rounded post-taxonomy" title="base64">
+            base64
+          </a><a href="/tags/cache-control/" class="badge rounded post-taxonomy" title="cache-control">
+            cache-control
+          </a><a href="/tags/class/" class="badge rounded post-taxonomy" title="Class">
+            Class
+          </a><a href="/tags/es2015/" class="badge rounded post-taxonomy" title="es2015">
+            es2015
+          </a><a href="/tags/etag/" class="badge rounded post-taxonomy" title="etag">
+            etag
+          </a><a href="/tags/event/" class="badge rounded post-taxonomy" title="Event">
+            Event
+          </a></div>
+      </div>
+    </section>
+    
+  </div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><a class="nav-link social-link" href="mailto:cx5397@qq.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a><a class="nav-link social-link" target="_blank" href="https://github.com/cx5397" title="GitHub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-github"></i>
+      </a><a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3542483317&amp;site=qq&amp;menu=yes" title="QQ" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-qq"></i>
+      </a><a class="nav-link social-link" target="_blank" href="https://www.zhihu.com/people/chen-xiang-60-27" title="Zhihu" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-zhihu"></i>
+      </a></nav>
+<div class="copyright mb-2">
+  Copyright © 2016-2022 Chen Xiang. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+  Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
+</div><a href="https://github.com/cx5397/iqianduan/tree/main/docs" target="_blank">
+  Deploys by github page
+</a>
+</footer>
+<script src="/js/bundle.min.4ef9d47b81edceeabf12a468e0a8228e2973b77670b64957bd005dc55cde7bea.js" integrity="sha256-TvnUe4Htzuq/EqRo4Kgijilzt3ZwtklXvQBdxVzee&#43;o=" crossorigin="anonymous" defer></script><script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('\/service-worker.js').then(function(reg) {
+      console.log('Successfully registered service worker', reg);
+    }).catch(function(err) {
+      console.warn('Error whilst registering service worker', err);
+    });
+  });
+}
+</script>
+</body>
+</html>
