@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/tags/date/</loc>
+    <lastmod>2022-07-25T11:37:51+08:00</lastmod>
+  </url><url>
+    <loc>/series/date/</loc>
+    <lastmod>2022-07-25T11:37:51+08:00</lastmod>
+  </url><url>
+    <loc>/posts/objects/date/</loc>
+    <lastmod>2022-07-25T11:37:51+08:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2022-07-25T11:37:51+08:00</lastmod>
+  </url><url>
+    <loc>/series/</loc>
+    <lastmod>2022-07-25T11:37:51+08:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2022-07-25T11:37:51+08:00</lastmod>
+  </url><url>
+    <loc>/categories/%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2022-07-25T11:37:51+08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-07-25T11:37:51+08:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2022-07-25T11:37:51+08:00</lastmod>
+  </url><url>
     <loc>/tags/class/</loc>
     <lastmod>2022-07-25T10:40:51+08:00</lastmod>
   </url><url>
@@ -9,24 +36,6 @@
     <lastmod>2022-07-25T10:40:51+08:00</lastmod>
   </url><url>
     <loc>/posts/objects/class/</loc>
-    <lastmod>2022-07-25T10:40:51+08:00</lastmod>
-  </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2022-07-25T10:40:51+08:00</lastmod>
-  </url><url>
-    <loc>/series/</loc>
-    <lastmod>2022-07-25T10:40:51+08:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2022-07-25T10:40:51+08:00</lastmod>
-  </url><url>
-    <loc>/categories/%E5%AF%B9%E8%B1%A1/</loc>
-    <lastmod>2022-07-25T10:40:51+08:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2022-07-25T10:40:51+08:00</lastmod>
-  </url><url>
-    <loc>/</loc>
     <lastmod>2022-07-25T10:40:51+08:00</lastmod>
   </url><url>
     <loc>/tags/event/</loc>
