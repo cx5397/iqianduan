@@ -1,0 +1,25 @@
++++
+title = "浏览器缓存过程"
+description = "cache-control、expires、last-modified、etag"
+date = 2022-07-27T08:58:51+08:00
+featured = false
+comment = true
+toc = true
+reward = true
+categories = [
+  "css"
+]
+series = [
+  "flex"
+]
+tags = [
+  'flex',
+ 
+]
+
+images = []
++++
+
+<!--more-->
+
+![flex](./images/css-flexbox-poster.png)
