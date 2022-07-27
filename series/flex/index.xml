@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flex on 爱前端</title>
+    <link>/series/flex/</link>
+    <description>Recent content in flex on 爱前端</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
+    <lastBuildDate>Wed, 27 Jul 2022 08:58:51 +0800</lastBuildDate><atom:link href="/series/flex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>浏览器缓存过程</title>
+      <link>/posts/css/flex/</link>
+      <pubDate>Wed, 27 Jul 2022 08:58:51 +0800</pubDate>
+      
+      <guid>/posts/css/flex/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
