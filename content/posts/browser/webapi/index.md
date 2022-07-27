@@ -13,7 +13,11 @@ series = [
   "web api"
 ]
 tags = [
-  'web api'
+  'console',
+  'window',
+  'document',
+  'node',
+  'ajax'
 ]
 
 images = []

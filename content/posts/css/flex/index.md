@@ -7,10 +7,10 @@ comment = true
 toc = true
 reward = true
 categories = [
-  "css"
+  "style"
 ]
 series = [
-  "flex"
+  "css"
 ]
 tags = [
   'flex',
