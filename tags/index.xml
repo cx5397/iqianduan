@@ -36,6 +36,33 @@
     </item>
     
     <item>
+      <title>ajax</title>
+      <link>/tags/ajax/</link>
+      <pubDate>Mon, 25 Jul 2022 10:37:51 +0800</pubDate>
+      
+      <guid>/tags/ajax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>console</title>
+      <link>/tags/console/</link>
+      <pubDate>Mon, 25 Jul 2022 10:37:51 +0800</pubDate>
+      
+      <guid>/tags/console/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>document</title>
+      <link>/tags/document/</link>
+      <pubDate>Mon, 25 Jul 2022 10:37:51 +0800</pubDate>
+      
+      <guid>/tags/document/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Event</title>
       <link>/tags/event/</link>
       <pubDate>Mon, 25 Jul 2022 10:37:51 +0800</pubDate>
@@ -59,6 +86,15 @@
       <pubDate>Mon, 25 Jul 2022 10:37:51 +0800</pubDate>
       
       <guid>/tags/module/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>node</title>
+      <link>/tags/node/</link>
+      <pubDate>Mon, 25 Jul 2022 10:37:51 +0800</pubDate>
+      
+      <guid>/tags/node/</guid>
       <description></description>
     </item>
     
@@ -99,11 +135,11 @@
     </item>
     
     <item>
-      <title>web api</title>
-      <link>/tags/web-api/</link>
+      <title>window</title>
+      <link>/tags/window/</link>
       <pubDate>Mon, 25 Jul 2022 10:37:51 +0800</pubDate>
       
-      <guid>/tags/web-api/</guid>
+      <guid>/tags/window/</guid>
       <description></description>
     </item>
     

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>css on 爱前端</title>
-    <link>/categories/css/</link>
-    <description>Recent content in css on 爱前端</description>
+    <title>style on 爱前端</title>
+    <link>/categories/style/</link>
+    <description>Recent content in style on 爱前端</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 27 Jul 2022 08:58:51 +0800</lastBuildDate><atom:link href="/categories/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Jul 2022 08:58:51 +0800</lastBuildDate><atom:link href="/categories/style/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>css flex</title>
       <link>/posts/css/flex/</link>

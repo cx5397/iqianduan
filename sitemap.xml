@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/categories/css/</loc>
+    <loc>/series/css/</loc>
     <lastmod>2022-07-27T08:58:51+08:00</lastmod>
   </url><url>
     <loc>/posts/css/flex/</loc>
@@ -11,10 +11,10 @@
     <loc>/tags/flex/</loc>
     <lastmod>2022-07-27T08:58:51+08:00</lastmod>
   </url><url>
-    <loc>/series/flex/</loc>
+    <loc>/posts/</loc>
     <lastmod>2022-07-27T08:58:51+08:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>/categories/style/</loc>
     <lastmod>2022-07-27T08:58:51+08:00</lastmod>
   </url><url>
     <loc>/series/</loc>
@@ -50,6 +50,15 @@
     <loc>/posts/objects/class/</loc>
     <lastmod>2022-07-25T10:40:51+08:00</lastmod>
   </url><url>
+    <loc>/tags/ajax/</loc>
+    <lastmod>2022-07-25T10:37:51+08:00</lastmod>
+  </url><url>
+    <loc>/tags/console/</loc>
+    <lastmod>2022-07-25T10:37:51+08:00</lastmod>
+  </url><url>
+    <loc>/tags/document/</loc>
+    <lastmod>2022-07-25T10:37:51+08:00</lastmod>
+  </url><url>
     <loc>/tags/event/</loc>
     <lastmod>2022-07-25T10:37:51+08:00</lastmod>
   </url><url>
@@ -75,6 +84,9 @@
     <lastmod>2022-07-25T10:37:51+08:00</lastmod>
   </url><url>
     <loc>/posts/objects/module/</loc>
+    <lastmod>2022-07-25T10:37:51+08:00</lastmod>
+  </url><url>
+    <loc>/tags/node/</loc>
     <lastmod>2022-07-25T10:37:51+08:00</lastmod>
   </url><url>
     <loc>/tags/number/</loc>
@@ -116,13 +128,13 @@
     <loc>/categories/vue/</loc>
     <lastmod>2022-07-25T10:37:51+08:00</lastmod>
   </url><url>
-    <loc>/tags/web-api/</loc>
-    <lastmod>2022-07-25T10:37:51+08:00</lastmod>
-  </url><url>
     <loc>/series/web-api/</loc>
     <lastmod>2022-07-25T10:37:51+08:00</lastmod>
   </url><url>
     <loc>/posts/browser/webapi/</loc>
+    <lastmod>2022-07-25T10:37:51+08:00</lastmod>
+  </url><url>
+    <loc>/tags/window/</loc>
     <lastmod>2022-07-25T10:37:51+08:00</lastmod>
   </url><url>
     <loc>/categories/%E5%B7%A5%E5%85%B7/</loc>
