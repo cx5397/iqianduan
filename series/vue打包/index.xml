@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vue打包 on 爱前端</title>
+    <link>/series/vue%E6%89%93%E5%8C%85/</link>
+    <description>Recent content in vue打包 on 爱前端</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
+    <lastBuildDate>Mon, 08 Aug 2022 13:37:51 +0800</lastBuildDate><atom:link href="/series/vue%E6%89%93%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>写一个插件收集打包环境信息，放置在在打包资源中</title>
+      <link>/posts/environment/buildenv/</link>
+      <pubDate>Mon, 08 Aug 2022 13:37:51 +0800</pubDate>
+      
+      <guid>/posts/environment/buildenv/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
