@@ -9,7 +9,7 @@
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
     <lastBuildDate>Mon, 08 Aug 2022 13:37:51 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>写一个插件收集打包环境信息，放置在在打包资源中</title>
+      <title>写一个插件收集打包环境信息，放置在打包资源中</title>
       <link>/posts/environment/buildenv/</link>
       <pubDate>Mon, 08 Aug 2022 13:37:51 +0800</pubDate>
       
