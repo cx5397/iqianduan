@@ -107,7 +107,7 @@ execCommand().then((res) => {
 
 ## 使用
 
-- 发包相关工具
+- 发部相关工具
 - 安装发布的工具
 - package.json,scripts 相关打包命令后+`&& node ./node_modules/@audaque/vue-config/lib/buildEnv`
 
