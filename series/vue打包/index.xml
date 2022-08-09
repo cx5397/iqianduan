@@ -9,7 +9,7 @@
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
     <lastBuildDate>Mon, 08 Aug 2022 13:37:51 +0800</lastBuildDate><atom:link href="/series/vue%E6%89%93%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>写一个插件收集打包环境信息，放置在打包资源中</title>
+      <title>打包信息收集</title>
       <link>/posts/environment/buildenv/</link>
       <pubDate>Mon, 08 Aug 2022 13:37:51 +0800</pubDate>
       
