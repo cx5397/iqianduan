@@ -1,7 +1,7 @@
 +++
 title = "斗牛点数计算"
 description = "新手算点麻烦，输入5张牌，傻瓜式帮你算出所有可能的点数"
-date = 2022-08-09T1042:51+08:00
+date = 2022-08-09T10:42:51+08:00
 featured = false
 comment = true
 toc = true
