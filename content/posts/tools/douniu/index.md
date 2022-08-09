@@ -21,6 +21,10 @@ images = []
 
 <!--more-->
 
+#### 在线演示
+
+- [傻瓜斗牛](https://wollld.github.io/script/tools/index.html)
+
 #### 贴代码
 
 ```
