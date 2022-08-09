@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} Chen Xiang. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 08 Aug 2022 13:37:51 +0800</lastBuildDate><atom:link href="/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Aug 2022 10:42:51 +0800</lastBuildDate><atom:link href="/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>游戏</title>
+      <link>/series/%E6%B8%B8%E6%88%8F/</link>
+      <pubDate>Tue, 09 Aug 2022 10:42:51 +0800</pubDate>
+      
+      <guid>/series/%E6%B8%B8%E6%88%8F/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>vue打包</title>
       <link>/series/vue%E6%89%93%E5%8C%85/</link>
