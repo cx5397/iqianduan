@@ -30,159 +30,159 @@ images = []
 ```
 <!DOCTYPE html>
 <html>
-<head>
-	<title>傻瓜斗牛</title>
-	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0, maximum-scale=1.0">
-	<style type="text/css">
-		html,body,.content{height:100%;margin:0;}
-		ul{
-			margin:0;
-			padding:0;
-			box-sizing: border-box;
+	<head>
+		<title>傻瓜斗牛</title>
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0, maximum-scale=1.0">
+		<style type="text/css">
+			html,body,.content{height:100%;margin:0;}
+			ul{
+				margin:0;
+				padding:0;
+				box-sizing: border-box;
 
-		}
-		ul.box li{
-			display:inline-block;
-			float:left;
-			width: 20%;
-			border:1px solid #dcdcdc;
-			box-sizing: border-box;
-			text-align:center;
-			line-height:60px;
-		}
-		ul.box li{
-			border-right-width:0;
-			border-bottom-width:0;
-		}
-		.content{
-			display:flex;
-			flex-direction: column;
+			}
+			ul.box li{
+				display:inline-block;
+				float:left;
+				width: 20%;
+				border:1px solid #dcdcdc;
+				box-sizing: border-box;
+				text-align:center;
+				line-height:60px;
+			}
+			ul.box li{
+				border-right-width:0;
+				border-bottom-width:0;
+			}
+			.content{
+				display:flex;
+				flex-direction: column;
 
-		}
-		ul#output{
-			padding-left: 30px;
-    		list-style-type: none;
-		}
-	</style>
-</head>
-<body>
-	<div class="content">
-		<div style="flex:1;font-size:28px;color:#999;">
-			<div>input: <span id="input" style="font-size:18px;"></span></div>
-			<div>output:</div>
-			<ul id="output" style="font-size:20px;"></ul>
-			<img src="./code.png" alt="" style="width:140px;position:absolute;top:0;right:0;">
+			}
+			ul#output{
+				padding-left: 30px;
+				list-style-type: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div style="flex:1;font-size:28px;color:#999;">
+				<div>input: <span id="input" style="font-size:18px;"></span></div>
+				<div>output:</div>
+				<ul id="output" style="font-size:20px;"></ul>
+				<img src="./code.png" alt="" style="width:140px;position:absolute;top:0;right:0;">
+			</div>
+			<ul style="height:186px" class="box">
+				<li>A</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li>J</li>
+				<li>Q</li>
+				<li>K</li>
+				<li>START</li>
+				<li>CLEAN</li>
+			</ul>
 		</div>
-		<ul style="height:186px" class="box">
-			<li>A</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
-			<li>5</li>
-			<li>6</li>
-			<li>7</li>
-			<li>8</li>
-			<li>9</li>
-			<li>10</li>
-			<li>J</li>
-			<li>Q</li>
-			<li>K</li>
-			<li>START</li>
-			<li>CLEAN</li>
-		</ul>
-	</div>
-<script src="https://cdn.staticfile.org/zepto/1.1.1/zepto.min.js"></script>
-<script type="text/javascript">
+		<script src="https://cdn.staticfile.org/zepto/1.1.1/zepto.min.js"></script>
+		<script type="text/javascript">
 
-	function getAllType(arr){
-		//1...10 100 110 120(JQK)
-		var other2= [],
-			the3=[];
+			function getAllType(arr){
+				//1...10 100 110 120(JQK)
+				var other2= [],
+					the3=[];
 
-		for(var i=0;i<arr.length;i++){
-			for(var j=0;j<arr.length;j++){
-				var sortStrArr= the3.map(function(item){return item.sort().join()})
-				var s= arr.slice(),
-					a= s[i],
-					b= s[j];
-				delete s[i];
-				delete s[j];
-				var the3insert= s.filter(function(item){return item})
+				for(var i=0;i<arr.length;i++){
+					for(var j=0;j<arr.length;j++){
+						var sortStrArr= the3.map(function(item){return item.sort().join()})
+						var s= arr.slice(),
+							a= s[i],
+							b= s[j];
+						delete s[i];
+						delete s[j];
+						var the3insert= s.filter(function(item){return item})
 
-				if(i<j && !sortStrArr.includes(the3insert.sort().join())){
-					other2.push([a,b])
-					the3.push(the3insert  )
+						if(i<j && !sortStrArr.includes(the3insert.sort().join())){
+							other2.push([a,b])
+							the3.push(the3insert  )
+						}
+					}
 				}
+				return {the3:the3,other2:other2};
 			}
-		}
-		return {the3:the3,other2:other2};
-	}
 
-	function  getPoint(obj){
-		console.log(obj)
-		var allPoint=[];
-		obj.the3.forEach(function(value,i){
-			var total= value.reduce(function(pre,next){return pre+Number(next)},0)
-			console.log(total,value)
-			if(total%10===0){
-				allPoint.push( value.join(',')+'| '+obj.other2[i].join(',') );
+			function  getPoint(obj){
+				console.log(obj)
+				var allPoint=[];
+				obj.the3.forEach(function(value,i){
+					var total= value.reduce(function(pre,next){return pre+Number(next)},0)
+					console.log(total,value)
+					if(total%10===0){
+						allPoint.push( value.join(',')+'| '+obj.other2[i].join(',') );
+					}
+				})
+				return allPoint;
 			}
-		})
-		return allPoint;
-	}
 
-	function parse2number(str){
-		return str.replace(/A/g,'1').replace(/J/g,'100').replace(/Q/g,'110').replace(/K/g,'120');
-	}
+			function parse2number(str){
+				return str.replace(/A/g,'1').replace(/J/g,'100').replace(/Q/g,'110').replace(/K/g,'120');
+			}
 
-	function parse2card(str){
-		str= str+',';
-		return str.replace(/100/g,'J').replace(/110/g,'Q').replace(/120/g,'K').replace(/10/g,'F').replace(/1/g,'A').replace(/F/g,'10')
-	}
+			function parse2card(str){
+				str= str+',';
+				return str.replace(/100/g,'J').replace(/110/g,'Q').replace(/120/g,'K').replace(/10/g,'F').replace(/1/g,'A').replace(/F/g,'10')
+			}
 
-	var inputs=[];
-	$('ul>li').on('click',function(e){
-		console.log(e)
+			var inputs=[];
+			$('ul>li').on('click',function(e){
+				console.log(e)
 
-		var input= e.target.innerText,
-			outputdom= $('#output'),
-			inputdom= $('#input');
+				var input= e.target.innerText,
+					outputdom= $('#output'),
+					inputdom= $('#input');
 
-		if(input==='START'){
-			outputdom.empty();
-			if(inputs.length===5){
-				var cardNum= parse2number(inputs.join(',')),
-					cardNumArr= cardNum.split(',');
+				if(input==='START'){
+					outputdom.empty();
+					if(inputs.length===5){
+						var cardNum= parse2number(inputs.join(',')),
+							cardNumArr= cardNum.split(',');
 
-				var points= getPoint(getAllType(cardNumArr));
-				if(points.length===0){
-					outputdom.append($('<li>没有点</li>'));
-					return;
+						var points= getPoint(getAllType(cardNumArr));
+						if(points.length===0){
+							outputdom.append($('<li>没有点</li>'));
+							return;
+						}
+						for(var i=0;i<points.length;i++){
+							outputdom.append($('<li>'+(parse2card(points[i]))+"</li>"))
+						}
+						console.log(points,cardNumArr)
+
+					}else{
+						alert('需要输入5张牌')
+					}
+
+				}else if(input==='CLEAN'){
+					inputs= [];
+					outputdom.empty();
+					inputdom.empty();
+
+				}else{
+					if( inputs.length<=4){
+						inputs.push(input);
+						inputdom.text(inputs.join(','))
+					}
 				}
-				for(var i=0;i<points.length;i++){
-					outputdom.append($('<li>'+(parse2card(points[i]))+"</li>"))
-				}
-				console.log(points,cardNumArr)
 
-			}else{
-				alert('需要输入5张牌')
-			}
-
-		}else if(input==='CLEAN'){
-			inputs= [];
-			outputdom.empty();
-			inputdom.empty();
-
-		}else{
-			if( inputs.length<=4){
-				inputs.push(input);
-				inputdom.text(inputs.join(','))
-			}
-		}
-
-	})
-</script>
-</body>
+			})
+		</script>
+	</body>
 </html>
 ```
 
