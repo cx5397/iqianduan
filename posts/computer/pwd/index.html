@@ -12,7 +12,7 @@
 <meta name="description" content="加密、解密" /><meta itemprop="name" content="加密、解密">
 <meta itemprop="description" content="加密、解密"><meta itemprop="datePublished" content="2022-07-25T10:10:51+08:00" />
 <meta itemprop="dateModified" content="2022-07-25T10:10:51+08:00" />
-<meta itemprop="wordCount" content="257">
+<meta itemprop="wordCount" content="849">
 <meta itemprop="keywords" content="加解密," /><meta property="og:title" content="加密、解密" />
 <meta property="og:description" content="加密、解密" />
 <meta property="og:type" content="article" />
@@ -239,7 +239,7 @@
   <span class="post-date" title="创建于 2022-07-25 02:10:51 &#43;0000 UTC。">
     2022-07-25
   </span><span class="post-reading-time">
-    1 分钟阅读
+    2 分钟阅读
   </span><span class="post-taxonomies"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="badge rounded-pill post-taxonomy">计算机基础</a><a href="/series/%E5%AE%89%E5%85%A8/" class="badge rounded-pill post-taxonomy">安全</a><a href="/tags/%E5%8A%A0%E8%A7%A3%E5%AF%86/" class="badge rounded-pill post-taxonomy">加解密</a></span>
 </div>
 <div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
@@ -254,40 +254,129 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#base64-加解密">base64 加解密</a></li>
-        <li><a href="#md5-散列值用于鉴别传输值是否被篡改md5js">md5 散列值，用于鉴别传输值是否被篡改(md5.js)</a></li>
-        <li><a href="#sha1-散列值用于鉴别传输值是否被篡改比-md5-强且慢sha1js">sha1 散列值，用于鉴别传输值是否被篡改，比 md5 强且慢(sha1.js)</a></li>
-        <li><a href="#rsa-用公钥私钥加密解密jsencryptjs">RSA 用公钥私钥加密解密(jsencrypt.js)</a></li>
-        <li><a href="#aes">AES</a></li>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
       </ul>
     </li>
   </ul>
 </nav>
   </div>
-</div><div class="post-content mb-3"><h3 id="base64-加解密">base64 加解密</h3>
+</div><div class="post-content mb-3"><h1 id="虚假加密">虚假加密</h1>
+<h5 id="base64原生方法或-cryptojs">base64(原生方法或 CryptoJS)</h5>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>var enc = window.btoa(str) //编码成base64的
 <span class="ln">2</span>var dec = window.atob(enc) //把base64解码
 <span class="ln">3</span>
 <span class="ln">4</span>//中文需要先编码 还可以解码回来
 <span class="ln">5</span>var str = btoa(encodeURIComponent(&#34;中文汉字&#34;));
 <span class="ln">6</span>decodeURIComponent(atob(enc)) =&gt;  中文汉字
-</code></pre></div><h3 id="md5-散列值用于鉴别传输值是否被篡改md5js">md5 散列值，用于鉴别传输值是否被篡改(md5.js)</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>var b =$(&#34;#logPassword&#34;);
-<span class="ln">2</span>$.md5(b.val())
-<span class="ln">3</span>
-<span class="ln">4</span>//两次md5 加盐
-<span class="ln">5</span>console.log(md5(md5(&#34;Condor Hero&#34;) + &#34;a&#34;));
-</code></pre></div><h3 id="sha1-散列值用于鉴别传输值是否被篡改比-md5-强且慢sha1js">sha1 散列值，用于鉴别传输值是否被篡改，比 md5 强且慢(sha1.js)</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>var sha = hex_sha1(&#39;mima123465&#39;);
-<span class="ln">2</span>console.log(sha);
-</code></pre></div><h3 id="rsa-用公钥私钥加密解密jsencryptjs">RSA 用公钥私钥加密解密(jsencrypt.js)</h3>
+</code></pre></div><h1 id="消息摘要a-b不可逆a-只要修改了b-就会有很大不同">消息摘要（a-&gt;b,不可逆、a 只要修改了，b 就会有很大不同）</h1>
+<h5 id="md5md5jscryptojs">MD5(md5.js、cryptoJS)</h5>
+<h5 id="shasha1jscryptojs">SHA(sha1.js、cryptoJS)</h5>
+<h1 id="对称加密加密与解密秘钥相同">对称加密(加密与解密秘钥相同)</h1>
+<h5 id="descryptojs">DES(CryptoJS)</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>var ciphertext = CryptoJS.DES.encrypt(message, key, cfg);
+</code></pre></div><h5 id="3descryptojs">3DES(CryptoJS)</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>var ciphertext = CryptoJS.TripleDES.encrypt(message, key, cfg);
+<span class="ln">2</span>var plaintext  = CryptoJS.TripleDES.decrypt(ciphertext, key, cfg);
+</code></pre></div><h5 id="aescryptojs">AES(CryptoJS)</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>var CryptoJS = require(&#34;crypto-js&#34;);
+<span class="ln"> 2</span>
+<span class="ln"> 3</span>// Encrypt
+<span class="ln"> 4</span>var ciphertext = CryptoJS.AES.encrypt(&#39;my message&#39;, &#39;secret key 123&#39;).toString();
+<span class="ln"> 5</span>
+<span class="ln"> 6</span>// Decrypt
+<span class="ln"> 7</span>var bytes  = CryptoJS.AES.decrypt(ciphertext, &#39;secret key 123&#39;);
+<span class="ln"> 8</span>var originalText = bytes.toString(CryptoJS.enc.Utf8);
+<span class="ln"> 9</span>
+<span class="ln">10</span>console.log(originalText); // &#39;my message&#39;
+</code></pre></div><h1 id="非对称加密加密与解密秘钥不同">非对称加密(加密与解密秘钥不同)</h1>
+<h5 id="rsajsencryptjs">RSA(jsencrypt.js)</h5>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>encrypt.setPublicKey(publicKey);
 <span class="ln">2</span>username = encrypt.encrypt(username);
 <span class="ln">3</span>password = encrypt.encrypt(password);
-</code></pre></div><h3 id="aes">AES</h3>
-<ul>
-<li>最常用的对称加密算法，密钥建立时间短、灵敏性好、内存需求低（不管怎样，反正就是好）</li>
-</ul></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+</code></pre></div><h5 id="ecc-更适合实现到资源严重受限制的设备中">ECC 更适合实现到资源严重受限制的设备中</h5>
+<h1 id="国密sm-cryptohttpsgithubcomjuneandgreensm-crypto密钥长度和分组长度均为-128-位">国密<a href="https://github.com/JuneAndGreen/sm-crypto" target="_blank" rel="noopener noreferrer">sm-crypto</a>
+，密钥长度和分组长度均为 128 位</h1>
+<h5 id="sm1-对称加密sm-1-由获得国密办资质认证的特定机构将算法封装在芯片中并销售给指定的厂商需要调用加密芯片的接口进行使用">SM1 对称加密，SM 1 由获得国密办资质认证的特定机构将算法封装在芯片中，并销售给指定的厂商，需要调用加密芯片的接口进行使用</h5>
+<h5 id="sm2-非对称加密具有自主知识产权的-ecc-算法">SM2 非对称加密，具有自主知识产权的 ECC 算法</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln"> 1</span>//获取密钥对
+<span class="ln"> 2</span>const sm2 = require(&#39;sm-crypto&#39;).sm2
+<span class="ln"> 3</span>
+<span class="ln"> 4</span>let keypair = sm2.generateKeyPairHex()
+<span class="ln"> 5</span>
+<span class="ln"> 6</span>publicKey = keypair.publicKey // 公钥
+<span class="ln"> 7</span>privateKey = keypair.privateKey // 私钥
+<span class="ln"> 8</span>
+<span class="ln"> 9</span>// 默认生成公钥 130 位太长，可以压缩公钥到 66 位
+<span class="ln">10</span>const compressedPublicKey = sm2.compressPublicKeyHex(publicKey) // compressedPublicKey 和 publicKey 等价
+<span class="ln">11</span>sm2.comparePublicKeyHex(publicKey, compressedPublicKey) // 判断公钥是否等价
+<span class="ln">12</span>
+<span class="ln">13</span>// 自定义随机数，参数会直接透传给 jsbn 库的 BigInteger 构造器
+<span class="ln">14</span>// 注意：开发者使用自定义随机数，需要自行确保传入的随机数符合密码学安全
+<span class="ln">15</span>let keypair2 = sm2.generateKeyPairHex(&#39;123123123123123&#39;)
+<span class="ln">16</span>let keypair3 = sm2.generateKeyPairHex(256, SecureRandom)
+<span class="ln">17</span>
+<span class="ln">18</span>let verifyResult = sm2.verifyPublicKey(publicKey) // 验证公钥
+<span class="ln">19</span>verifyResult = sm2.verifyPublicKey(compressedPublicKey) // 验证公钥
+<span class="ln">20</span>//=========================================
+<span class="ln">21</span>const sm2 = require(&#39;sm-crypto&#39;).sm2
+<span class="ln">22</span>const cipherMode = 1 // 1 - C1C3C2，0 - C1C2C3，默认为1
+<span class="ln">23</span>
+<span class="ln">24</span>let encryptData = sm2.doEncrypt(msgString, publicKey, cipherMode) // 加密结果
+<span class="ln">25</span>let decryptData = sm2.doDecrypt(encryptData, privateKey, cipherMode) // 解密结果
+<span class="ln">26</span>
+<span class="ln">27</span>encryptData = sm2.doEncrypt(msgArray, publicKey, cipherMode) // 加密结果，输入数组
+<span class="ln">28</span>decryptData = sm2.doDecrypt(encryptData, privateKey, cipherMode, {output: &#39;array&#39;}) // 解密结果，输出数组
+</code></pre></div><h5 id="sm3-消息摘要">SM3 消息摘要</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>const sm3 = require(&#39;sm-crypto&#39;).sm3
+<span class="ln">2</span>
+<span class="ln">3</span>let hashData = sm3(&#39;abc&#39;) // 杂凑
+<span class="ln">4</span>
+<span class="ln">5</span>// hmac
+<span class="ln">6</span>hashData = sm3(&#39;abc&#39;, {
+<span class="ln">7</span>    key: &#39;daac25c1512fe50f79b0e4526b93f5c0e1460cef40b6dd44af13caec62e8c60e0d885f3c6d6fb51e530889e6fd4ac743a6d332e68a0f2a3923f42585dceb93e9&#39;, // 要求为 16 进制串或字节数组
+<span class="ln">8</span>})
+</code></pre></div><h5 id="sm4-分组密码算法">SM4 分组密码算法</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>const sm4 = require(&#39;sm-crypto&#39;).sm4
+<span class="ln">2</span>const msg = &#39;hello world! 我是 juneandgreen.&#39; // 可以为 utf8 串或字节数组
+<span class="ln">3</span>const key = &#39;0123456789abcdeffedcba9876543210&#39; // 可以为 16 进制串或字节数组，要求为 128 比特
+<span class="ln">4</span>
+<span class="ln">5</span>let encryptData = sm4.encrypt(msg, key) // 加密，默认输出 16 进制字符串，默认使用 pkcs#7 填充（传 pkcs#5 也会走 pkcs#7 填充）
+<span class="ln">6</span>let encryptData = sm4.encrypt(msg, key, {padding: &#39;none&#39;}) // 加密，不使用 padding
+<span class="ln">7</span>let encryptData = sm4.encrypt(msg, key, {padding: &#39;none&#39;, output: &#39;array&#39;}) // 加密，不使用 padding，输出为字节数组
+<span class="ln">8</span>let encryptData = sm4.encrypt(msg, key, {mode: &#39;cbc&#39;, iv: &#39;fedcba98765432100123456789abcdef&#39;}) // 加密，cbc 模式
+</code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
@@ -337,12 +426,12 @@
           <span class="float-end post-date">2022-07-25
 </span>
         </li><li>
-          <a href="/posts/browser/cache/">浏览器缓存过程
+          <a href="/posts/environment/nginx/">Nginx相关配置
 </a>
           <span class="float-end post-date">2022-07-21
 </span>
         </li><li>
-          <a href="/posts/environment/nginx/">Nginx相关配置
+          <a href="/posts/browser/cache/">浏览器缓存过程
 </a>
           <span class="float-end post-date">2022-07-21
 </span>
