@@ -23,7 +23,7 @@ images = []
 
 #### 在线演示
 
-- [傻瓜斗牛](https://wollld.github.io/script/tools/index.html)
+- [傻瓜斗牛](https://www.iqianduan.tech/html/niu.html)
 
 #### 贴代码
 
